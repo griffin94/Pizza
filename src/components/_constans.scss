@@ -1,0 +1,9 @@
+$z-index-order-list: Negative, Zero, Positive, Hint, Nav, Modal;
+
+@function z($el) {
+	@return index($z-index-order-list, $el) - 2;
+}
+
+@mixin zIndex($el) {
+	z-index: z($el);
+}

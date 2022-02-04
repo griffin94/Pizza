@@ -1,6 +1,8 @@
+@import '../constans';
+
 .container {
 	position: absolute;
-	z-index: 2;
+	@include zIndex(Hint);
 }
 
 .hint {
@@ -20,14 +22,14 @@
 
 .content {
 	position: relative;
-	z-index: 2;
+	@include zIndex(Positive);
 }
 
 .arrow {
 	position: absolute;
-	z-index: 1;
 	background-color: orange;
 	transform: rotate(45deg);
+	@include zIndex(Zero);
 }
 
 @keyframes fadeIn {
