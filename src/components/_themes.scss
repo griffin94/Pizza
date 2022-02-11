@@ -5,6 +5,18 @@ $light-theme: (
 		background: white(1),
 		outline: black(1),
 	),
+	button: (
+		background: $blue-light,
+		border: $blue-light,
+		hover: $blue-medium,
+		color: white(1),
+	),
+	button-icon: (
+		background: transparent,
+		border: $blue-light,
+		hover: $gray-light,
+		color: $blue-light,
+	),
 	navigation: (
 		background: white(0.7),
 		shadow: $gray-light,
@@ -17,16 +29,28 @@ $light-theme: (
 
 $dark-theme: (
 	body: (
-		background: $blue-medium,
+		background: $blue-dark,
 		outline: white(1),
 	),
+	button: (
+		background: $blue-light,
+		border: $blue-light,
+		hover: $blue-medium,
+		color: white(1),
+	),
+	button-icon: (
+		background: transparent,
+		border: $blue-light,
+		hover: $blue-medium,
+		color: $blue-light,
+	),
 	navigation: (
-		background: blue-dark(0.7),
-		shadow: $blue-light,
-		list-background: blue-dark(1),
+		background: blue-darkest(0.7),
+		shadow: $blue-medium,
+		list-background: blue-darkest(1),
 		list-shadow: black(0.5),
 		list-font: white(1),
-		hover: $blue-light,
+		hover: $blue-medium,
 	),
 );
 

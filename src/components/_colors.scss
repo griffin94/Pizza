@@ -1,10 +1,11 @@
 $gray-light: #e7ebf0;
 $gray-dark: #3e5060;
 $blue-lighter: #66b2ff;
-$blue-light: #0a3766;
-$blue-medium: #001e3c;
+$blue-light: #007FFF;
+$blue-medium: #0a3766;
+$blue-dark: #001e3c;
 
-@function blue-dark($opacity) {
+@function blue-darkest($opacity) {
 	@return rgb(10, 25, 41, $opacity);
 }
 @function black($opacity) {
