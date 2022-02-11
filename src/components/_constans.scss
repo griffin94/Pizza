@@ -7,3 +7,20 @@ $z-index-order-list: Negative, Zero, Positive, Hint, Nav, Modal;
 @mixin zIndex($el) {
 	z-index: z($el);
 }
+
+$breakpoints: (
+	tablet: 800px,
+	laptop: 1024px,
+	desktop: 1280px,
+);
+
+@function getBreakpoint($key) {
+	@return map-get($breakpoints, $key);
+}
+
+@mixin focusOutline {
+	outline-style: solid;
+	outline-width: 1px;
+	outline-offset: -1px;
+	outline-color: var(--body-outline);
+}

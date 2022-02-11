@@ -1,0 +1,39 @@
+@import './colors';
+
+$light-theme: (
+	body: (
+		background: white(1),
+		outline: black(1),
+	),
+	navigation: (
+		background: white(0.7),
+		shadow: $gray-light,
+		list-background: white(1),
+		list-shadow: black(0.1),
+		list-font: $gray-dark,
+		hover: $gray-light,
+	),
+);
+
+$dark-theme: (
+	body: (
+		background: $blue-medium,
+		outline: white(1),
+	),
+	navigation: (
+		background: blue-dark(0.7),
+		shadow: $blue-light,
+		list-background: blue-dark(1),
+		list-shadow: black(0.5),
+		list-font: white(1),
+		hover: $blue-light,
+	),
+);
+
+@mixin spread-map($map: ()) {
+	@each $type, $type-map in $map {
+		@each $key, $value in $type-map {
+			--#{$type}-#{$key}: #{$value};
+		}
+	}
+}

@@ -1,0 +1,15 @@
+$gray-light: #e7ebf0;
+$gray-dark: #3e5060;
+$blue-lighter: #66b2ff;
+$blue-light: #0a3766;
+$blue-medium: #001e3c;
+
+@function blue-dark($opacity) {
+	@return rgb(10, 25, 41, $opacity);
+}
+@function black($opacity) {
+	@return rgb(0, 0, 0, $opacity);
+}
+@function white($opacity) {
+	@return rgb(255, 255, 255, $opacity);
+}
