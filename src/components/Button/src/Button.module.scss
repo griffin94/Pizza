@@ -15,37 +15,39 @@
 	border-radius: 10px;
 	position: relative;
 	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
-		border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+		border-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	&:focus-visible {
 		@include focusOutline;
-		outline-offset: -2px;
-		outline-width: 2px;
 	}
 }
 
 .primary {
 	padding: 0 8px;
-	color: var(--button-color);
-	border-color: var(--button-border);
-	background-color: var(--button-background);
+	color: var(--button-primary-font-color);
+	border-color: var(--button-primary-border);
+	background-color: var(--button-primary-background);
 
 	&:hover,
 	&:focus {
-		border-color: var(--button-hover);
-		background-color: var(--button-hover);
+		color: var(--button-primary-font-color-hover);
+		border-color: var(--button-primary-border-hover);
+		background-color: var(--button-primary-background-hover);
 	}
 }
 
 .icon {
 	width: 34px;
 	font-size: 1.5rem;
-	color: var(--button-icon-color);
+	color: var(--button-icon-font-color);
 	border-color: var(--button-icon-border);
 	background-color: var(--button-icon-background);
 
 	&:hover,
 	&:focus {
-		background: var(--button-icon-hover);
+		color: var(--button-icon-font-color-hover);
+		background: var(--button-icon-background-hover);
+		border-color: var(--button-icon-border-hover);
 	}
 }

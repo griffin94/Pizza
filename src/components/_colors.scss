@@ -1,16 +1,26 @@
-$gray-light: #e7ebf0;
-$gray-dark: #3e5060;
-$blue-lighter: #66b2ff;
-$blue-light: #007FFF;
-$blue-medium: #0a3766;
-$blue-dark: #001e3c;
+$white: #fff;
+$black: #000;
 
-@function blue-darkest($opacity) {
-	@return rgb(10, 25, 41, $opacity);
-}
-@function black($opacity) {
-	@return rgb(0, 0, 0, $opacity);
-}
-@function white($opacity) {
-	@return rgb(255, 255, 255, $opacity);
+$blue-100: #F3FBFF;
+$blue-200: #D6EDFF;
+$blue-300: #A0D4FF;
+$blue-400: #57B0FB;
+$blue-500: #1292EE;
+$blue-600: #0077CC;
+$blue-700: #005CA4;
+$blue-800: #034077;
+$blue-900: #002651;
+
+$gray-100: #b2b2b2;
+$gray-200: #a0a0a0;
+$gray-300: #8e8e8e;
+$gray-400: #7c7c7c;
+$gray-500: #6b6b6b;
+$gray-600: #595959;
+$gray-700: #474747;
+$gray-800: #353535;
+$gray-900: #232323;
+
+@function withOpacity($color, $opacity) {
+	@return rgba($color, $opacity);
 }
