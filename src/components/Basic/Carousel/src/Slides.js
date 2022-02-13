@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useSlides from './useSlides';
-import { cx } from '../../../utils';
+import { cx } from 'utils';
 import cs from './Carousel.module.scss';
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
 

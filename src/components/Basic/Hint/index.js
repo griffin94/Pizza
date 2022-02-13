@@ -1,9 +1,9 @@
 import React, { cloneElement } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
-import { cx } from '../../utils';
-import cs from './Hint.module.scss';
-import useHint from './useHint';
+import { cx } from 'utils';
+import cs from './src/Hint.module.scss';
+import useHint from './src/useHint';
 
 const Hint = ({ animation, arrowSize, children, content, openDelay }) =>
 	(({ containerRef, hideHint, showHint, styles, open, childrenRef }) => (

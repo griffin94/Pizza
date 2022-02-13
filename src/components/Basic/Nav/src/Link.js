@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
-import { cx } from '../../../utils';
+import { cx } from 'utils';
 import cs from './Link.module.scss';
 
 const Link = ({ children, path }) => (

@@ -1,5 +1,5 @@
 import { useState, useRef, useLayoutEffect } from 'react';
-import { getAbsolutePosition } from '../../utils/';
+import { getAbsolutePosition } from '../../../../utils/';
 
 const useHint = ({ arrowSize = 10, openDelay = 0 }) => {
 	const [open, setOpen] = useState(false);

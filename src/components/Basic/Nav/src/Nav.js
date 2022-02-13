@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Button } from '../../';
+import { Button } from 'components';
 import useNav from './useNav';
-import { cx } from '../../../utils';
+import { cx } from 'utils';
 import cs from './Nav.module.scss';
 
 const Nav = ({ children }) =>

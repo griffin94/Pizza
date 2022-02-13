@@ -3,7 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { cx } from '../../../utils';
+import { cx } from 'utils';
 import { IconContext } from 'react-icons';
 import useCarousel from './useCarousel';
 

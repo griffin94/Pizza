@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { cx } from '../../../utils';
+import { cx } from 'utils';
 import cs from './Carousel.module.scss';
 
 const Slide = ({ children, className, isActive, ...props }) => (
