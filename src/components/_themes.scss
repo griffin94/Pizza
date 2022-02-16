@@ -4,6 +4,7 @@ $light-theme: (
 	body: (
 		background: $white,
 		outline: $black,
+		font-color: $black,
 	),
 	button-primary: (
 		background: $blue-500,
@@ -36,6 +37,7 @@ $dark-theme: (
 	body: (
 		background: $blue-900,
 		outline: $white,
+		font-color: $white,
 	),
 	button-primary: (
 		background: $blue-500,
