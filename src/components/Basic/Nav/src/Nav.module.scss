@@ -70,8 +70,7 @@ $nav-height: 60px;
 	@media (min-width: getBreakpoint(laptop)) {
 		& {
 			position: static;
-			display: flex;
-			flex-direction: row;
+			@include row(flex-start);
 			background-color: transparent;
 			padding: 0;
 			box-shadow: none;
