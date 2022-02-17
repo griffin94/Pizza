@@ -1,7 +1,10 @@
+@import 'components/constans';
+
 .slides {
 	position: relative;
 	overflow: hidden;
 	border-radius: 6px;
+	@include zIndex(Zero);
 }
 
 .button {
@@ -16,6 +19,7 @@
 	cursor: pointer;
 	opacity: 0.6;
 	transition: transform 0.15s ease-in, opacity 0.15s ease-in;
+	@include zIndex(Positive);
 
 	&.leftButton {
 		left: 10px;
@@ -48,6 +52,7 @@
 	position: relative;
 	opacity: 0;
 	transition: opacity 0.5s linear;
+	@include zIndex(Zero);
 	&.active {
 		opacity: 1;
 	}

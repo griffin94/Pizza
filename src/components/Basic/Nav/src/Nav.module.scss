@@ -10,6 +10,8 @@ $nav-height: 60px;
 	justify-content: center;
 	align-items: center;
 	padding: 0 10px;
+	position: relative;
+	@include zIndex(Nav);
 }
 
 .button {
@@ -59,7 +61,7 @@ $nav-height: 60px;
 	box-shadow: none;
 	transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
 		box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	@include zIndex(Nav);
+	@include zIndex(Zero);
 
 	&.open {
 		left: 0;
