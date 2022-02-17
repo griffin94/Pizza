@@ -1,16 +1,18 @@
 $white: #fff;
 $black: #000;
 
-$blue-100: #F3FBFF;
-$blue-200: #D6EDFF;
-$blue-300: #A0D4FF;
-$blue-400: #57B0FB;
-$blue-500: #1292EE;
-$blue-600: #0077CC;
-$blue-700: #005CA4;
-$blue-800: #034077;
-$blue-900: #002651;
+$blue-100: #f3fbff;
+$blue-200: #d6edff;
+$blue-300: #a0d4ff;
+$blue-400: #57b0fb;
+$blue-500: #1292ee;
+$blue-600: #0077cc;
+$blue-700: #005ca4;
+$blue-800: #122D49;
+$blue-900: #001E3C;
+$blue-1000: #0A1929;
 
+$gray-000: #d5d5d5;
 $gray-100: #b2b2b2;
 $gray-200: #a0a0a0;
 $gray-300: #8e8e8e;
@@ -30,6 +32,14 @@ $red-600: #cf0a06;
 $red-700: #ac0805;
 $red-800: #8a0604;
 $red-900: #670503;
+
+$green-400: #56ff1e;
+$green-500: #3ef900;
+$green-600: #35d600;
+
+$gold-500: #e1bb3b;
+
+$cream: #f2f2f2;
 
 @function withOpacity($color, $opacity) {
 	@return rgba($color, $opacity);

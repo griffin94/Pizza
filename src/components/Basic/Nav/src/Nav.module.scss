@@ -5,7 +5,8 @@ $nav-height: 60px;
 
 .nav {
 	height: $nav-height;
-	background-color: transparent;
+	background-color: var(--navigation-background);
+	border-bottom: 1px solid var(--navigation-border);
 	display: flex;
 	justify-content: center;
 	align-items: center;

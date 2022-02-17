@@ -2,7 +2,7 @@
 
 $light-theme: (
 	body: (
-		background: $white,
+		background: $cream,
 		outline: $black,
 		font-color: $black,
 	),
@@ -23,19 +23,23 @@ $light-theme: (
 		font-color-hover: $blue-700,
 	),
 	navigation: (
-		background: withOpacity($white, 0.7),
-		shadow: $gray-100,
+		background: $white,
+		border: $gray-000,
 		list-background: $white,
 		list-shadow: withOpacity($black, 0.2),
 		link-font-color: $gray-800,
 		link-font-color-hover: $gray-800,
 		link-background-hover: $gray-100,
 	),
+	menu: (
+		background: $white,
+		border: $gray-000,
+	)
 );
 
 $dark-theme: (
 	body: (
-		background: $blue-900,
+		background: $blue-1000,
 		outline: $white,
 		font-color: $white,
 	),
@@ -56,14 +60,18 @@ $dark-theme: (
 		font-color-hover: $blue-300,
 	),
 	navigation: (
-		background: withOpacity($blue-800, 0.7),
-		shadow: $gray-100,
-		list-background: $blue-800,
+		background: $blue-900,
+		border: $blue-800,
+		list-background: $blue-900,
 		list-shadow: withOpacity($black, 0.4),
 		link-font-color: $white,
 		link-font-color-hover: $white,
 		link-background-hover: $blue-700,
 	),
+	menu: (
+		background: $blue-900,
+		border: $blue-800,
+	)
 );
 
 @mixin spread-map($map: ()) {
