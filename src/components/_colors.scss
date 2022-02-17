@@ -21,6 +21,16 @@ $gray-700: #474747;
 $gray-800: #353535;
 $gray-900: #232323;
 
+$red-100: #fb8f8d;
+$red-200: #fa6d6a;
+$red-300: #f94b48;
+$red-400: #f72925;
+$red-500: #f20b07;
+$red-600: #cf0a06;
+$red-700: #ac0805;
+$red-800: #8a0604;
+$red-900: #670503;
+
 @function withOpacity($color, $opacity) {
 	@return rgba($color, $opacity);
 }
