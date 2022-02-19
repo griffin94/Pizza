@@ -25,14 +25,14 @@ $breakpoints: (
 	outline-color: var(--body-outline);
 }
 
-@mixin row($horizontal-align: center, $vertical-align: center) {
+@mixin row($horizontal-align:null, $vertical-align:null) {
 	display: flex;
 	flex-direction: row;
 	justify-content: $horizontal-align;
 	align-items: $vertical-align;
 }
 
-@mixin col($horizontal-align: center, $vertical-align: center) {
+@mixin col($horizontal-align:null, $vertical-align:null) {
 	display: flex;
 	flex-direction: column;
 	justify-content: $vertical-align;
