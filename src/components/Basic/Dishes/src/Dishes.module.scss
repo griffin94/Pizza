@@ -1,0 +1,28 @@
+@import 'components/constans';
+@import 'components/colors';
+
+.container {
+    padding: 8px;
+}
+
+.header {
+    background-color: var(--menu-background);
+    border: 1px solid var(--menu-border);
+    margin: 16px;
+    padding: 16px;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 3em;
+    background: linear-gradient($gold-500, $red-500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
