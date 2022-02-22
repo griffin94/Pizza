@@ -1,15 +1,17 @@
 @import 'components/constans';
 @import 'components/colors';
 
+$gap: 8px;
+
 .container {
-    padding: 8px;
+    padding: 2 * $gap;
 }
 
 .header {
     background-color: var(--menu-background);
     border: 1px solid var(--menu-border);
-    margin: 16px;
-    padding: 16px;
+    margin: 2 * $gap;
+    padding: 2 * $gap;
 }
 
 .list {
