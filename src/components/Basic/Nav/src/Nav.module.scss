@@ -1,18 +1,11 @@
 @import 'components/constans';
 @import 'components/animations';
 
-$nav-height: 60px;
-
-.nav {
-	height: $nav-height;
-	background-color: var(--navigation-background);
-	border-bottom: 1px solid var(--navigation-border);
+.container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 0 10px;
-	position: relative;
-	@include zIndex(Nav);
 }
 
 .button {
@@ -52,10 +45,10 @@ $nav-height: 60px;
 .list {
 	list-style: none;
 	position: absolute;
-	top: $nav-height;
+	top: 100%;
 	left: -100%;
 	width: 100%;
-	max-height: calc(100vh - $nav-height);
+	max-height: calc(100vh - 100%);
 	overflow: hidden;
 	padding: 20px;
 	background-color: var(--navigation-list-background);
@@ -67,7 +60,7 @@ $nav-height: 60px;
 	&.open {
 		left: 0;
 		overflow: auto;
-		box-shadow: var(--navigation-list-shadow) 0px 4px 20px;
+		box-shadow: 0px 15px 10px -15px var(--navigation-list-shadow);
 	}
 
 	@media (min-width: getBreakpoint(laptop)) {
@@ -78,6 +71,10 @@ $nav-height: 60px;
 			padding: 0;
 			box-shadow: none;
 			overflow: visible;
+		}
+
+		&.open {
+			box-shadow: none;
 		}
 	}
 }
