@@ -17,14 +17,12 @@ const Nav = ({ children }) =>
 					className={cx(cs.icon, cs.openIcon, open ? cs.open : cs.close)}
 				/>
 			</Button.Icon>
-			<ul className={cx(cs.list, open && cs.open)}>
-				{children}
-			</ul>
+			<ul className={cx(cs.list, open && cs.open)}>{children}</ul>
 		</nav>
 	))(useNav());
 
 Nav.propTypes = {
-	children: PropTypes.node
+	children: PropTypes.node,
 };
 
 export default Nav;

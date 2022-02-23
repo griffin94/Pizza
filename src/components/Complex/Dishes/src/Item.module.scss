@@ -1,0 +1,54 @@
+@import 'components/constans';
+@import 'components/colors';
+
+$gap: 8px;
+
+.item {
+	@include col(center);
+	text-align: center;
+	margin: 2 * $gap;
+	padding: 2 * $gap;
+	border-radius: 4px;
+	border: 1px solid var(--menu-border);
+	background-color: var(--menu-background);
+}
+.row {
+	@include row(center, baseline);
+	margin: $gap 0;
+}
+.image {
+	width: 260px;
+	height: 220px;
+}
+.name {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: $red-400;
+	font-size: 20px;
+}
+.price {
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.icon {
+	@include row(center, center);
+	margin: 0 4px;
+	font-weight: 700;
+}
+.bestseller {
+	color: $gold-500;
+}
+.new {
+	color: $blue-600;
+}
+.spicy {
+	color: $red-500;
+}
+.vege {
+	color: $green-600;
+}
+
+.button {
+	margin-top: auto;
+}

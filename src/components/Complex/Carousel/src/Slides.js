@@ -25,7 +25,7 @@ const Slides = ({ children, active, setActive, variant, IDS }) =>
 				}}
 				id={IDS.slides}
 				// The live region is off when the carousel is automatically rotating
-				aria-live="polite"
+				aria-live='polite'
 			>
 				{React.Children.map(children, (child, index) =>
 					React.cloneElement(child, {
@@ -68,7 +68,7 @@ Slides.propTypes = {
 	children: PropTypes.node.isRequired,
 	active: PropTypes.number,
 	setActive: PropTypes.func,
-	IDS: PropTypes.object
+	IDS: PropTypes.object,
 };
 
 export default Slides;

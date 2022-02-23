@@ -10,8 +10,8 @@ const Link = ({ children, path }) => (
 );
 
 Link.propTypes = {
-    children: PropTypes.node.isRequired,
-    path: PropTypes.string.isRequired,
-}
+	children: PropTypes.node.isRequired,
+	path: PropTypes.string.isRequired,
+};
 
 export default Link;

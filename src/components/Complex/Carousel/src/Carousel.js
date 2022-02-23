@@ -35,7 +35,7 @@ const Carousel = ({
 						active,
 						setActive,
 						IDS,
-						variant
+						variant,
 					}),
 				)}
 			</section>

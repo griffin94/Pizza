@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import cs from './Dishes.module.scss';
 import { cx } from 'utils';
 
-
-
 const Dishes = ({ children, kind }) => (
 	<div className={cx(cs.container)}>
 		<header className={cx(cs.header)}>
@@ -15,7 +13,7 @@ const Dishes = ({ children, kind }) => (
 
 Dishes.propTypes = {
 	children: PropTypes.node,
-	kind: PropTypes.string
+	kind: PropTypes.string,
 };
 
 export default Dishes;

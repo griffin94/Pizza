@@ -48,14 +48,14 @@ const Gallery = ({
 				)}
 			</ul>
 		</div>
-	))(useGallery({active, children, visibleSlides}));
+	))(useGallery({ active, children, visibleSlides }));
 
 Gallery.propTypes = {
 	active: PropTypes.number,
 	children: PropTypes.node.isRequired,
 	setActive: PropTypes.func,
 	visibleSlides: PropTypes.number,
-	IDS: PropTypes.object
+	IDS: PropTypes.object,
 };
 
 export default Gallery;
