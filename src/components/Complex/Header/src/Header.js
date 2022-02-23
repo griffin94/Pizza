@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav } from 'components';
+import { ControlPanel, Nav } from 'components';
 import { routes } from 'routes';
 import { cx } from 'utils';
 import cs from './Header.module.scss';
@@ -14,6 +14,7 @@ const Header = () => {
 					</Nav.Link>
 				))}
 			</Nav>
+			<ControlPanel />
 		</header>
 	);
 };
