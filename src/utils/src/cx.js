@@ -1,3 +1,3 @@
 const cx = (...classNames) =>
-	classNames.filter((className) => className).join(' ') || null;
+  classNames.filter((className) => className).join(' ') || null;
 export default cx;

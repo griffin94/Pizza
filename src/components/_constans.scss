@@ -1,40 +1,40 @@
 $z-index-order-list: Negative, Zero, Positive, Hint, Nav, Modal;
 
 @function z($el) {
-	@return index($z-index-order-list, $el) - 2;
+  @return index($z-index-order-list, $el) - 2;
 }
 
 @mixin zIndex($el) {
-	z-index: z($el);
+  z-index: z($el);
 }
 
 $breakpoints: (
-	tablet: 800px,
-	laptop: 1024px,
-	desktop: 1280px,
+  tablet: 800px,
+  laptop: 1024px,
+  desktop: 1280px,
 );
 
 @function getBreakpoint($key) {
-	@return map-get($breakpoints, $key);
+  @return map-get($breakpoints, $key);
 }
 
 @mixin focusOutline {
-	outline-style: solid;
-	outline-width: 2px;
-	outline-offset: -2px;
-	outline-color: var(--body-outline);
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
+  outline-color: var(--body-outline);
 }
 
 @mixin row($horizontal-align:null, $vertical-align:null) {
-	display: flex;
-	flex-direction: row;
-	justify-content: $horizontal-align;
-	align-items: $vertical-align;
+  display: flex;
+  flex-direction: row;
+  justify-content: $horizontal-align;
+  align-items: $vertical-align;
 }
 
 @mixin col($horizontal-align:null, $vertical-align:null) {
-	display: flex;
-	flex-direction: column;
-	justify-content: $vertical-align;
-	align-items: $horizontal-align;
+  display: flex;
+  flex-direction: column;
+  justify-content: $vertical-align;
+  align-items: $horizontal-align;
 }

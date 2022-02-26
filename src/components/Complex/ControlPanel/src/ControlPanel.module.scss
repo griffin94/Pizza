@@ -1,28 +1,28 @@
 @import 'components/animations';
 
 .icon {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
 
-	&.openIcon.open {
-		animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-			fadeOut 0.3s linear forwards;
-	}
+  &.openIcon.open {
+    animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+      fadeOut 0.3s linear forwards;
+  }
 
-	&.openIcon.close {
-		animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-			fadeIn 0.3s linear forwards;
-	}
+  &.openIcon.close {
+    animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+      fadeIn 0.3s linear forwards;
+  }
 
-	&.closeIcon.open {
-		animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-			fadeIn 0.3s linear forwards;
-	}
+  &.closeIcon.open {
+    animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+      fadeIn 0.3s linear forwards;
+  }
 
-	&.closeIcon.close {
-		animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-			fadeOut 0.3s linear forwards;
-	}
+  &.closeIcon.close {
+    animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+      fadeOut 0.3s linear forwards;
+  }
 }

@@ -1,85 +1,85 @@
 @import 'components/constans';
 
 .slides {
-	position: relative;
-	overflow: hidden;
-	border-radius: 6px;
-	@include zIndex(Zero);
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  @include zIndex(Zero);
 }
 
 .button {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	opacity: 0.6;
-	transition: transform 0.15s ease-in, opacity 0.15s ease-in;
-	@include zIndex(Positive);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.15s ease-in, opacity 0.15s ease-in;
+  @include zIndex(Positive);
 
-	&.leftButton {
-		left: 10px;
-	}
+  &.leftButton {
+    left: 10px;
+  }
 
-	&.rightButton {
-		right: 10px;
-	}
+  &.rightButton {
+    right: 10px;
+  }
 
-	&:hover {
-		opacity: 1;
-		transform: translateY(-50%) scale(1.3);
-	}
+  &:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.3);
+  }
 }
 
 .list {
-	margin: 0;
-	list-style: none;
-	display: flex;
-	align-items: center;
-	transition: transform 0.3s ease-in;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in;
 }
 
 .listItem {
-	width: 100%;
-	overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .fade {
-	position: relative;
-	opacity: 0;
-	transition: opacity 0.5s linear;
-	@include zIndex(Zero);
-	&.active {
-		opacity: 1;
-	}
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  @include zIndex(Zero);
+  &.active {
+    opacity: 1;
+  }
 }
 
 .image {
-	width: 100%;
-	display: block;
-	border-radius: 6px;
+  width: 100%;
+  display: block;
+  border-radius: 6px;
 }
 
 //----------------------------
 
 .gallery {
-	margin-top: 16px;
-	overflow: hidden;
+  margin-top: 16px;
+  overflow: hidden;
 
-	.listItem {
-		flex-grow: 0;
-		cursor: pointer;
-	}
+  .listItem {
+    flex-grow: 0;
+    cursor: pointer;
+  }
 
-	.image {
-		border: 2px solid transparent;
-	}
+  .image {
+    border: 2px solid transparent;
+  }
 
-	.active {
-		border: 2px solid #009dff;
-	}
+  .active {
+    border: 2px solid #009dff;
+  }
 }

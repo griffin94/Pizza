@@ -3,5 +3,5 @@ import Link from './src/Link';
 
 
 export default Object.assign(Nav, {
-    Link
+  Link
 });

@@ -4,12 +4,12 @@ import Routes from 'routes';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => (
-	<Router>
-		<Header />
-		<Main>
-			<Routes />
-		</Main>
-	</Router>
+  <Router>
+    <Header />
+    <Main>
+      <Routes />
+    </Main>
+  </Router>
 );
 
 export default App;

@@ -4,27 +4,27 @@
 $gap: 8px;
 
 .container {
-    padding: 2 * $gap;
+  padding: 2 * $gap;
 }
 
 .header {
-    background-color: var(--menu-background);
-    border: 1px solid var(--menu-border);
-    margin: 2 * $gap;
-    padding: 2 * $gap;
+  background-color: var(--menu-background);
+  border: 1px solid var(--menu-border);
+  margin: 2 * $gap;
+  padding: 2 * $gap;
 }
 
 .list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
 }
 
 .title {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 3em;
-    background: linear-gradient($gold-500, $red-500);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 3em;
+  background: linear-gradient($gold-500, $red-500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

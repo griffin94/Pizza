@@ -4,7 +4,7 @@ import Slides from './src/Slides';
 import Slide from './src/Slide';
 
 export default Object.assign(Carousel, {
-	Gallery,
-	Slides,
-	Slide,
+  Gallery,
+  Slides,
+  Slide,
 });

@@ -3,29 +3,29 @@ import { Dishes } from 'components';
 import dishes from 'data/dishes';
 
 const Menu = () => {
-	const [offer, setOffer] = useState(null);
+  const [offer, setOffer] = useState(null);
 
-	useEffect(() => {
-		getOffer();
-	}, []);
+  useEffect(() => {
+    getOffer();
+  }, []);
 
-	const getOffer = async () => {
-		const { response } = await dishes;
-		setOffer(response);
-	};
-	
-	return (
-		<div>
-			{offer &&
-				Object.keys(offer.data).map((dishKind, idx) => (
-					<Dishes kind={dishKind} key={idx}>
-						{offer.data[dishKind].map((dish, idx) => (
-							<Dishes.Item {...dish} key={idx} />
-						))}
-					</Dishes>
-				))}
-		</div>
-	);
+  const getOffer = async () => {
+    const { response } = await dishes;
+    setOffer(response);
+  };
+  
+  return (
+    <div>
+      {offer &&
+        Object.keys(offer.data).map((dishKind, idx) => (
+          <Dishes kind={dishKind} key={idx}>
+            {offer.data[dishKind].map((dish, idx) => (
+              <Dishes.Item {...dish} key={idx} />
+            ))}
+          </Dishes>
+        ))}
+    </div>
+  );
 };
 
 export default Menu;

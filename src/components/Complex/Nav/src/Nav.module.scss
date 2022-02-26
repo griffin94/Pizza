@@ -2,78 +2,78 @@
 @import 'components/animations';
 
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
-	@media (min-width: getBreakpoint(laptop)) {
-		& {
-			display: none;
-		}
-	}
-	.icon {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) rotate(0deg);
+  @media (min-width: getBreakpoint(laptop)) {
+    & {
+      display: none;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
 
-		&.openIcon.open {
-			animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-				fadeOut 0.3s linear forwards;
-		}
+    &.openIcon.open {
+      animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+        fadeOut 0.3s linear forwards;
+    }
 
-		&.openIcon.close {
-			animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-				fadeIn 0.3s linear forwards;
-		}
+    &.openIcon.close {
+      animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+        fadeIn 0.3s linear forwards;
+    }
 
-		&.closeIcon.open {
-			animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-				fadeIn 0.3s linear forwards;
-		}
+    &.closeIcon.open {
+      animation: rotateLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+        fadeIn 0.3s linear forwards;
+    }
 
-		&.closeIcon.close {
-			animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-				fadeOut 0.3s linear forwards;
-		}
-	}
+    &.closeIcon.close {
+      animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+        fadeOut 0.3s linear forwards;
+    }
+  }
 }
 
 .list {
-	list-style: none;
-	position: absolute;
-	top: 100%;
-	left: -100%;
-	width: 100%;
-	max-height: calc(100vh - 100%);
-	overflow: hidden;
-	padding: 20px;
-	background-color: var(--navigation-list-background);
-	box-shadow: none;
-	transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	@include zIndex(Zero);
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 100%;
+  max-height: calc(100vh - 100%);
+  overflow: hidden;
+  padding: 20px;
+  background-color: var(--navigation-list-background);
+  box-shadow: none;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  @include zIndex(Zero);
 
-	&.open {
-		left: 0;
-		overflow: auto;
-		box-shadow: 0px 15px 10px -15px var(--navigation-list-shadow);
-	}
+  &.open {
+    left: 0;
+    overflow: auto;
+    box-shadow: 0px 15px 10px -15px var(--navigation-list-shadow);
+  }
 
-	@media (min-width: getBreakpoint(laptop)) {
-		& {
-			position: static;
-			@include row;
-			background-color: transparent;
-			padding: 0;
-			box-shadow: none;
-			overflow: visible;
-		}
+  @media (min-width: getBreakpoint(laptop)) {
+    & {
+      position: static;
+      @include row;
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
 
-		&.open {
-			box-shadow: none;
-		}
-	}
+    &.open {
+      box-shadow: none;
+    }
+  }
 }

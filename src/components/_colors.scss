@@ -42,5 +42,5 @@ $gold-500: #e1bb3b;
 $cream: #f2f2f2;
 
 @function withOpacity($color, $opacity) {
-	@return rgba($color, $opacity);
+  @return rgba($color, $opacity);
 }
