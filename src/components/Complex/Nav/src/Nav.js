@@ -7,8 +7,11 @@ import { cx } from 'utils';
 import cs from './Nav.module.scss';
 
 const Nav = ({ children }) =>
-  (({ toggle, open }) => (
-    <nav className={cx(cs.container)}>
+  (({ open, setOpen, toggle }) => (
+    <nav
+      className={cx(cs.container)}
+      onBlur={() => setOpen(false)}
+    >
       <Button.Icon onClick={toggle} className={cx(cs.button)}>
         <FaTimes
           className={cx(cs.icon, cs.closeIcon, open ? cs.open : cs.close)}

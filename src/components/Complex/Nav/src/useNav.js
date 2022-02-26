@@ -6,6 +6,7 @@ const useNav = () => {
 
   return {
     open,
+    setOpen,
     toggle,
   };
 };
