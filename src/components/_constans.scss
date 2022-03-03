@@ -9,6 +9,7 @@ $z-index-order-list: Negative, Zero, Positive, Hint, Nav, Modal;
 }
 
 $breakpoints: (
+  mobile: 400px,
   tablet: 800px,
   laptop: 1024px,
   desktop: 1280px,

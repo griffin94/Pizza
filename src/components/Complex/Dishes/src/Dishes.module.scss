@@ -1,23 +1,26 @@
 @import 'components/constans';
 @import 'components/colors';
 
-$gap: 8px;
+$gap: 16px;
 
 .container {
-  padding: 2 * $gap;
+  padding: $gap;
 }
 
 .header {
   background-color: var(--menu-background);
   border: 1px solid var(--menu-border);
-  margin: 2 * $gap;
-  padding: 2 * $gap;
+  margin: $gap 0;
+  padding: $gap;
 }
 
 .list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  gap: $gap;
+  @media(min-width: getBreakpoint(mobile)) {
+    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  }
 }
 
 .title {

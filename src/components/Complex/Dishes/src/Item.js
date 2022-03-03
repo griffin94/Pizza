@@ -50,7 +50,7 @@ const Item = ({
         </span>
       )}
     </div>
-    <Button className={cx(cs.button)}>Wybierz</Button>
+    <Button>Wybierz</Button>
   </li>
 );
 
