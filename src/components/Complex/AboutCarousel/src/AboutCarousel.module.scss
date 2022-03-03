@@ -1,0 +1,33 @@
+@import 'components/constans.scss';
+@import 'components/colors.scss';
+
+.carousel {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.figure {
+  position: relative;
+  @include zIndex(Zero);
+}
+
+.figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+  background-color: withOpacity($gray-900, 0.6);
+  backdrop-filter: blur(2px);
+  color: $white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 1px;
+}

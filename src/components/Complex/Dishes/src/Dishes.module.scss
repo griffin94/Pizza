@@ -3,14 +3,14 @@
 
 $gap: 16px;
 
-.container {
-  padding: $gap;
+.container:not(:last-of-type) {
+  margin-bottom: 40px;
 }
 
 .header {
   background-color: var(--menu-background);
   border: 1px solid var(--menu-border);
-  margin: $gap 0;
+  margin-bottom: $gap;
   padding: $gap;
 }
 

@@ -1,4 +1,5 @@
 export { default as Button } from './Basic/Button';
+export { default as AboutCarousel } from './Complex/AboutCarousel';
 export { default as Carousel } from './Complex/Carousel';
 export { default as ControlPanel } from './Complex/ControlPanel';
 export { default as Dishes } from './Complex/Dishes';
