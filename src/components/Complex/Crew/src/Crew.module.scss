@@ -1,0 +1,31 @@
+@import 'components/constans';
+
+.container {
+  display: grid;
+  gap: 16px;
+  @media(min-width: getBreakpoint(mobile)) {
+    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  }
+}
+
+.tile {
+  @include col(center);
+  padding: 32px;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.title {
+  text-transform: capitalize;
+  text-decoration: dotted;
+  margin-bottom: 16px;
+}
+
+.description {
+  text-align: center;
+}
