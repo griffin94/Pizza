@@ -2,7 +2,7 @@
 
 .container {
   display: grid;
-  gap: 16px;
+  gap: 4rem;
   @media(min-width: getBreakpoint(mobile)) {
     grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
   }
@@ -10,20 +10,20 @@
 
 .tile {
   @include col(center);
-  padding: 32px;
+  padding: 4rem;
 }
 
 .image {
   display: block;
   max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 16px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 
 .title {
   text-transform: capitalize;
   text-decoration: dotted;
-  margin-bottom: 16px;
+  margin-bottom: 2rem;
 }
 
 .description {

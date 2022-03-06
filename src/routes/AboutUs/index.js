@@ -1,6 +1,4 @@
 import React from 'react';
-import cs from './src/AboutUs.module.scss';
-import { cx } from 'utils';
 import { AboutCarousel, Crew, Section } from 'components';
 
 const Home = () => (

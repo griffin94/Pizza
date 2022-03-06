@@ -1,15 +1,19 @@
 @import 'components/constans';
 
 .section {
-  margin: 64px 0;
+  margin: 4rem 0;
 
   &:first-child {
     margin-top: 0;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .title {
-  margin-bottom: 16px;
+  margin-bottom: 2rem;
   text-decoration: underline;
   letter-spacing: 1px;
 }

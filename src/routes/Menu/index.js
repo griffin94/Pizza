@@ -15,7 +15,7 @@ const Menu = () => {
   };
   
   return (
-    <div>
+    <>
       {offer &&
         Object.keys(offer.data).map((dishKind, idx) => (
           <Dishes kind={dishKind} key={idx}>
@@ -24,7 +24,7 @@ const Menu = () => {
             ))}
           </Dishes>
         ))}
-    </div>
+    </>
   );
 };
 

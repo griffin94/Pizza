@@ -3,7 +3,7 @@
 .slides {
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 1rem;
   @include zIndex(Zero);
 }
 
@@ -61,13 +61,13 @@
 .image {
   width: 100%;
   display: block;
-  border-radius: 6px;
+  border-radius: 1rem;
 }
 
 //----------------------------
 
 .gallery {
-  margin-top: 16px;
+  margin-top: 2rem;
   overflow: hidden;
 
   .listItem {
