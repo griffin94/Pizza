@@ -7,74 +7,74 @@ import { Button } from 'components';
 import { useNavigate } from 'react-router-dom';
 
 const Item = ({
-	category,
-	image,
-	ingrediens,
-	isBestseller,
-	isNew,
-	isSpicy,
-	isVege,
-	name,
-	price,
+  category,
+  image,
+  ingrediens,
+  isBestseller,
+  isNew,
+  isSpicy,
+  isVege,
+  name,
+  price,
 }) =>
-	((navigate) =>
-		[category, ingrediens, name, price].every((el) => el !== undefined) ? (
-			<li className={cx(cs.item)}>
-				<img src={image} alt={name} className={cx(cs.image)} />
-				<div className={cx(cs.row)}>
-					<span className={cx(cs.name)}>{name}&nbsp;</span>
-					<span className={cx(cs.price)}>od {price?.small ?? price}zł</span>
-				</div>
-				<div className={cx(cs.row)}>
-					<span>{ingrediens}</span>
-				</div>
-				<div className={cx(cs.row)}>
-					{isBestseller && (
-						<span className={cx(cs.icon, cs.bestseller)}>
-							<AiFillStar />
-							&nbsp;Bestseller
-						</span>
-					)}
-					{isNew && (
-						<span className={cx(cs.icon, cs.new)}>
-							<AiFillStar />
-							&nbsp;New
-						</span>
-					)}
-					{isSpicy && (
-						<span className={cx(cs.icon, cs.spicy)}>
-							<GiChiliPepper />
-							&nbsp;Spicy
-						</span>
-					)}
-					{isVege && (
-						<span className={cx(cs.icon, cs.vege)}>
-							<GiThreeLeaves />
-							&nbsp;Vege
-						</span>
-					)}
-				</div>
-				<Button onClick={() => navigate(`${category}/${name}`)}>Wybierz</Button>
-			</li>
-		) : null)(useNavigate());
+  ((navigate) =>
+    [category, ingrediens, name, price].every((el) => el !== undefined) ? (
+      <li className={cx(cs.item)}>
+        <img src={image} alt={name} className={cx(cs.image)} />
+        <div className={cx(cs.row)}>
+          <span className={cx(cs.name)}>{name}&nbsp;</span>
+          <span className={cx(cs.price)}>od {price?.small ?? price}zł</span>
+        </div>
+        <div className={cx(cs.row)}>
+          <span>{ingrediens}</span>
+        </div>
+        <div className={cx(cs.row)}>
+          {isBestseller && (
+            <span className={cx(cs.icon, cs.bestseller)}>
+              <AiFillStar />
+              &nbsp;Bestseller
+            </span>
+          )}
+          {isNew && (
+            <span className={cx(cs.icon, cs.new)}>
+              <AiFillStar />
+              &nbsp;New
+            </span>
+          )}
+          {isSpicy && (
+            <span className={cx(cs.icon, cs.spicy)}>
+              <GiChiliPepper />
+              &nbsp;Spicy
+            </span>
+          )}
+          {isVege && (
+            <span className={cx(cs.icon, cs.vege)}>
+              <GiThreeLeaves />
+              &nbsp;Vege
+            </span>
+          )}
+        </div>
+        <Button onClick={() => navigate(`${category}/${name}`)}>Wybierz</Button>
+      </li>
+    ) : null)(useNavigate());
 
 Item.propTypes = {
-	category: PropTypes.string.isRequired,
-	image: PropTypes.string,
-	ingrediens: PropTypes.string.isRequired,
-	isBestseller: PropTypes.bool,
-	isNew: PropTypes.bool,
-	isSpicy: PropTypes.bool,
-	isVege: PropTypes.bool,
-	name: PropTypes.string.isRequired,
-	price: PropTypes.oneOfType([
-		PropTypes.number.isRequired,
-		PropTypes.exact({
-			small: PropTypes.number,
-			medium: PropTypes.number,
-			max: PropTypes.number,
-		}).isRequired,
-	]),
+  category: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  ingrediens: PropTypes.string.isRequired,
+  isBestseller: PropTypes.bool,
+  isNew: PropTypes.bool,
+  isSpicy: PropTypes.bool,
+  isVege: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.oneOfType([
+    PropTypes.number.isRequired,
+    PropTypes.exact({
+      small: PropTypes.number,
+      medium: PropTypes.number,
+      max: PropTypes.number,
+    }).isRequired,
+  ]),
 };
 
 export default Item;
