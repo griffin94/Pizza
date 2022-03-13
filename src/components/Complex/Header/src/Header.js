@@ -1,6 +1,5 @@
 import React from 'react';
 import { ControlPanel, Nav } from 'components';
-import { routes } from 'routes';
 import { cx } from 'utils';
 import cs from './Header.module.scss';
 
@@ -8,11 +7,11 @@ const Header = () => {
   return (
     <header className={cx(cs.container)}>
       <Nav>
-        {routes.map(({ id, path, linkName }) => (
-          <Nav.Link key={id} path={path}>
-            {linkName}
-          </Nav.Link>
-        ))}
+        <Nav.Link path='/'>O nas</Nav.Link>
+        <Nav.Link path='/promocje'>Promocje</Nav.Link>
+        <Nav.Link path='/menu'>Menu</Nav.Link>
+        <Nav.Link path='/galeria'>Galeria</Nav.Link>
+        <Nav.Link path='/kontakt'>Kontakt</Nav.Link>
       </Nav>
       <ControlPanel />
     </header>

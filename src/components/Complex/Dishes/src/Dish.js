@@ -3,10 +3,10 @@ import cs from './Dishes.module.scss';
 import { cx } from 'utils';
 import Section from 'components/Basic/Section';
 
-const Dishes = ({ children, kind }) => (
+const Dishes = ({ children, category }) => (
   <Section>
     <header className={cx(cs.header)}>
-      <h2 className={cx(cs.title)}>{kind}</h2>
+      <h2 className={cx(cs.title)}>{category}</h2>
     </header>
     <ul className={cx(cs.list)}>{children}</ul>
   </Section>
@@ -14,7 +14,7 @@ const Dishes = ({ children, kind }) => (
 
 Dishes.propTypes = {
   children: PropTypes.node,
-  kind: PropTypes.string,
+  category: PropTypes.string,
 };
 
 export default Dishes;

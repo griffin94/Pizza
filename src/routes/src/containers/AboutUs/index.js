@@ -1,7 +1,7 @@
 import React from 'react';
 import { AboutCarousel, Crew, Section } from 'components';
 
-const Home = () => (
+const AboutUs = () => (
 	<>
 		<Section title='O nas'>
 			<p>
@@ -22,4 +22,4 @@ const Home = () => (
 	</>
 );
 
-export default Home;
+export default AboutUs;
