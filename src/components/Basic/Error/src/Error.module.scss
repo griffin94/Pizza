@@ -1,0 +1,17 @@
+@import 'components/constans';
+@import 'components/colors';
+
+.container {
+  @include col(center);
+  color: $red-500;
+  font-weight: bold;
+
+  svg {
+    width : 40px;
+    height: 40px;
+  }
+
+  * {
+    margin: 0.5rem;
+  }
+}

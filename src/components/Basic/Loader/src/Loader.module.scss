@@ -1,0 +1,16 @@
+@import 'components/animations';
+@import 'components/constans';
+
+.container {
+  @include col(center);
+}
+
+.loader {
+  width : 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid var(--loader-border);
+  border-right: 4px solid transparent;
+  animation: rotateRight 1s linear infinite;
+}

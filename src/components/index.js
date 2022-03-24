@@ -1,4 +1,6 @@
 export { default as Button } from './Basic/Button';
+export { default as Error } from './Basic/Error';
+export { default as Loader } from './Basic/Loader';
 export { default as Section } from './Basic/Section';
 export { default as AboutCarousel } from './Complex/AboutCarousel';
 export { default as Carousel } from './Complex/Carousel';
