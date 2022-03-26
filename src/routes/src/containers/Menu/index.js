@@ -1,15 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import { Details, Dishes } from 'components';
-import useMenu from 'routes/src/api/Menu';
+import useMenu from '../../api/Menu';
 
 const Menu = () =>
-  (({ data, error, loading }) => (
-    <>
-      <Routes>
-        <Route index element={<Dishes data={data} />} />
-        <Route path=':category/:name' element={<Details data={data} />} />
-      </Routes>
-    </>
+  ((props) => (
+    <Routes>
+      <Route index element={<Dishes {...props} />} />
+      <Route path=':category/:name' element={<Details {...props} />} />
+    </Routes>
   ))(useMenu());
 
 export default Menu;

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Dish from './src/Dish';
 import Item from './src/Item';
+import { withLoader } from 'components/HOC';
 
 const Dishes = ({ data }) =>
   data
@@ -17,4 +18,4 @@ Dishes.propTypes = {
   data: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.object)),
 };
 
-export default Dishes;
+export default withLoader(Dishes);

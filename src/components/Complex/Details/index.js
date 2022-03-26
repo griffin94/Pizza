@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { withLoader } from 'components/HOC';
 
 const Details = ({ data }) => {
   const { name, category } = useParams();
@@ -23,4 +24,4 @@ const Details = ({ data }) => {
   );
 };
 
-export default Details;
+export default withLoader(Details);

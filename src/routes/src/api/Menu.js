@@ -1,32 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchMenuData } from 'redux/actions/creators';
 
 const useMenu = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+	const { data, error, loading } = useSelector((state) => state.menu);
+	const dispatch = useDispatch();
 
-  useEffect(() => {
-    getMenu();
-  }, []);
+	useEffect(() => {
+		!data && loadData();
+	}, []);
 
-  const getMenu = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch('/menu.json');
-      const { data } = await response.json();
-      setData(data);
-      setLoading(false);
-    } catch (e) {
-      console.error(e);
-      setError(true);
-    }
-  };
-
-  return {
-    data,
-    error,
-    loading,
-  };
+	const loadData = () => dispatch(fetchMenuData());
+	return { data, error, loading, loadData };
 };
 
 export default useMenu;
