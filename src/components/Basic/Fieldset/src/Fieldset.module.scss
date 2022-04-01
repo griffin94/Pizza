@@ -1,0 +1,15 @@
+.container {
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  & + & {
+    margin-top: 4rem;
+  }
+}
+
+.legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
