@@ -38,6 +38,20 @@ $light-theme: (
     link-font-color-hover: $gray-800,
     link-background-hover: $gray-100,
   ),
+  radio: (
+    border: $gray-500,
+    border-checked: $blue-500,
+    border-checkmark: $gray-500,
+    border-checkmark-checked: $white,
+    color: $white,
+    color-checked: $white,
+    background: transparent,
+    background-checked: $blue-500,
+  ),
+  textfield: (
+    border: $gray-500,
+    color: $black,
+  )
 );
 
 $dark-theme: (
@@ -78,6 +92,20 @@ $dark-theme: (
     link-font-color-hover: $white,
     link-background-hover: $blue-700,
   ),
+  radio: (
+    border: $gray-500,
+    border-checked: $blue-500,
+    border-checkmark: $gray-500,
+    border-checkmark-checked: $white,
+    color: $white,
+    color-checked: $white,
+    background: transparent,
+    background-checked: $blue-500,
+  ),
+  textfield: (
+    border: $gray-500,
+    color: $white,
+  )
 );
 
 @mixin spread-map($map: ()) {

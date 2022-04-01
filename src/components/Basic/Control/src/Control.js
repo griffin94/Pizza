@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 import { cx } from 'utils';
 import cs from './Control.module.scss';
 
-const Control = ({ checked, id, label, name, onChange, type, value }) => {
+const Control = ({
+	checked,
+	className,
+	id,
+	label,
+	name,
+	onChange,
+	type,
+	value,
+}) => {
 	const inputRef = useRef(null);
 
 	const checkInput = (e) => {
@@ -16,6 +25,7 @@ const Control = ({ checked, id, label, name, onChange, type, value }) => {
 	return (
 		<div
 			className={cx(
+				className,
 				cs.container,
 				{
 					radio: cs.radio,
@@ -47,6 +57,7 @@ const Control = ({ checked, id, label, name, onChange, type, value }) => {
 
 Control.propTypes = {
 	checked: PropTypes.bool,
+	className: PropTypes.string,
 	id: PropTypes.string,
 	label: PropTypes.string,
 	name: PropTypes.string,

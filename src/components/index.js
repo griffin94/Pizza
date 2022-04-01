@@ -1,7 +1,9 @@
 export { default as Button } from './Basic/Button';
+export { Radio, Checkbox } from './Basic/Control';
 export { default as Error } from './Basic/Error';
 export { default as Loader } from './Basic/Loader';
 export { default as Section } from './Basic/Section';
+export { default as Textfield } from './Basic/Textfield';
 export { default as AboutCarousel } from './Complex/AboutCarousel';
 export { default as Carousel } from './Complex/Carousel';
 export { default as Crew } from './Complex/Crew';

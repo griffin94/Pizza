@@ -4,6 +4,7 @@ import { cx } from 'utils';
 import cs from './src/Textfield.module.scss';
 
 const Textfield = ({
+  className,
   error,
   id,
   label,
@@ -14,7 +15,7 @@ const Textfield = ({
   type,
   value,
 }) => (
-  <div className={cx(cs.container)}>
+  <div className={cx(className, cs.container)}>
     <label className={cx(cs.label)} htmlFor={id}>
       {label}
     </label>
@@ -33,6 +34,7 @@ const Textfield = ({
 );
 
 Textfield.propTypes = {
+  className: PropTypes.string,
   error: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string,
