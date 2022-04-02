@@ -9,6 +9,7 @@
   background-color: transparent;
   border: 1px solid var(--textfield-border);
   border-radius: 0.5rem;
+  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus {
     border: 2px solid $blue-500;
@@ -23,7 +24,7 @@
 
 .errorContainer {
   display: block;
-  min-height: 20px;
+  min-height: 21px;
   margin-bottom: 0.5rem;
   color: $red-500;
   font-size: 1.75rem;
