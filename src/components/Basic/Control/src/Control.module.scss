@@ -45,7 +45,12 @@
 }
 
 .input {
-  display: none;
+  clip: rect(1px 1px 1px 1px);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
   
   &:checked + .label {
     color: var(--radio-color-checked);

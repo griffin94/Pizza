@@ -10,6 +10,7 @@ const Control = ({
   id,
   label,
   name,
+  onBlur,
   onChange,
   type,
   value,
@@ -40,6 +41,7 @@ const Control = ({
         id={id}
         name={name}
         onChange={onChange}
+        onBlur={onBlur}
         ref={inputRef}
         type={type}
         value={value}
@@ -63,6 +65,7 @@ Control.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
   type: PropTypes.string,
   value: PropTypes.string,
