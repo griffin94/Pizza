@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'utils';
 import cs from './Control.module.scss';
+import { useId } from 'react-id-generator';
 
 const Control = ({
   checked,
   className,
   error,
-  id,
   label,
   name,
   onBlur,
@@ -15,6 +15,7 @@ const Control = ({
   type,
   value,
 }) => {
+  const [id] = useId(1, `${type}-`);
   const inputRef = useRef(null);
 
   const checkInput = (e) => {
@@ -62,7 +63,6 @@ Control.propTypes = {
   checked: PropTypes.bool,
   className: PropTypes.string,
   error: PropTypes.bool,
-  id: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
   onBlur: PropTypes.func,
