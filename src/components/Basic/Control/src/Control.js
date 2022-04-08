@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'utils';
 import cs from './Control.module.scss';
@@ -16,20 +15,13 @@ const Control = ({
   value,
 }) => {
   const [id] = useId(1, `${type}-`);
-  const inputRef = useRef(null);
-
-  const checkInput = (e) => {
-    e.preventDefault();
-    (e.code === 'Space' || e.code === 'Enter') &&
-      inputRef.current !== null &&
-      inputRef.current.click();
-  };
 
   return (
     <div
       className={cx(
         className,
         cs.container,
+        error && cs.error,
         {
           radio: cs.radio,
           checkbox: cs.checkbox,
@@ -43,15 +35,12 @@ const Control = ({
         name={name}
         onChange={onChange}
         onBlur={onBlur}
-        ref={inputRef}
         type={type}
         value={value}
       />
       <label
-        className={cx(cs.label, error && cs.error)}
+        className={cx(cs.label)}
         htmlFor={id}
-        onKeyPress={checkInput}
-        tabIndex='0'
       >
         {label}
       </label>

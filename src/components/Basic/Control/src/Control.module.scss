@@ -1,5 +1,6 @@
 @import 'components/colors';
 @import 'components/animations';
+@import 'components/constans';
 
 .container {
   display: inline-block;
@@ -36,9 +37,12 @@
     .checkbox & {
       border-radius: 0.5rem;
     }
+    .error & {
+      border-color: $red-500;
+    }
   }
 
-  &.error {
+  .error & {
     border: 2px solid $red-500;
     animation: shake 0.3s;
   }
@@ -51,6 +55,10 @@
   height: 1px;
   overflow: hidden;
   position: absolute;
+
+  &:focus + .label {
+    @include focusOutline;
+  }
   
   &:checked + .label {
     color: var(--radio-color-checked);
