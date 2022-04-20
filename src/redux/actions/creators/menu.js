@@ -2,7 +2,7 @@ import {
   FETCH_MENU_REQUEST,
   FETCH_MENU_SUCCESS,
   FETCH_MENU_FAILURE,
-} from './types';
+} from '../types';
 
 export const fetchMenuRequest = () => ({ type: FETCH_MENU_REQUEST });
 

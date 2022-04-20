@@ -1,13 +1,13 @@
 import { Error, Loader } from 'components';
 
 const withLoader = (WrappedComponent) => {
-  const WithLoader = ({ error, loading, loadData, ...props }) =>
+  const WithLoader = ({ data, error, loadData, loading }) =>
     error ? (
       <Error error={error} reload={loadData} />
-    ) : loading ? (
+    ) : loading || !data ? (
       <Loader />
     ) : (
-      <WrappedComponent {...props} />
+      <WrappedComponent data={data} />
     );
 
   return WithLoader;

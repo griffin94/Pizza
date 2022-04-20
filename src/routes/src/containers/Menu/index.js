@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Details, Dishes } from 'components';
+import { Dishes } from 'components';
+import Details from './src/Details';
 import useMenu from '../../api/Menu';
 
 const Menu = () =>

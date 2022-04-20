@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import _ from 'lodash';
 
-const useForm = ({ initialValues, validate, onSubmit }) => {
+const useForm = ({ initialValues = {}, validate, onSubmit }) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});

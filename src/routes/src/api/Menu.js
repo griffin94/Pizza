@@ -3,15 +3,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchMenuData } from 'redux/actions/creators';
 
 const useMenu = () => {
-	const { data, error, loading } = useSelector((state) => state.menu);
-	const dispatch = useDispatch();
+  const { data, error, loading } = useSelector((state) => state.menu);
+  const dispatch = useDispatch();
 
-	useEffect(() => {
-		!data && loadData();
-	}, []);
+  useEffect(() => {
+    !data && loadData();
+  }, []);
 
-	const loadData = () => dispatch(fetchMenuData());
-	return { data, error, loading, loadData };
+  const loadData = () => dispatch(fetchMenuData());
+  return {
+    data,
+    error,
+    loadData,
+    loading,
+  };
 };
 
 export default useMenu;
