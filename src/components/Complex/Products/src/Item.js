@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Item = ({
   category,
+  id,
   image,
   ingrediens,
   isBestseller,
@@ -54,12 +55,13 @@ const Item = ({
             </span>
           )}
         </div>
-        <Button onClick={() => navigate(`${category}/${name}`)}>Wybierz</Button>
+        <Button onClick={() => navigate(id)}>Wybierz</Button>
       </li>
     ) : null)(useNavigate());
 
 Item.propTypes = {
   category: PropTypes.string.isRequired,
+  id: PropTypes.string,
   image: PropTypes.string,
   ingrediens: PropTypes.string.isRequired,
   isBestseller: PropTypes.bool,

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import cs from './Dishes.module.scss';
+import cs from './Products.module.scss';
 import { cx } from 'utils';
 import Section from 'components/Basic/Section';
 
-const Dishes = ({ children, category }) => (
+const Products = ({ children, category }) => (
   <Section>
     <header className={cx(cs.header)}>
       <h2 className={cx(cs.title)}>{category}</h2>
@@ -12,9 +12,9 @@ const Dishes = ({ children, category }) => (
   </Section>
 );
 
-Dishes.propTypes = {
+Products.propTypes = {
   children: PropTypes.node,
   category: PropTypes.string,
 };
 
-export default Dishes;
+export default Products;
