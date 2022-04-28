@@ -19,12 +19,12 @@ const Item = ({
   price,
 }) =>
   ((navigate) =>
-    [category, ingrediens, name, price].every((el) => el !== undefined) ? (
+    [id, ingrediens, name, price].every((el) => el !== undefined) ? (
       <li className={cx(cs.item)}>
         <img src={image} alt={name} className={cx(cs.image)} />
         <div className={cx(cs.row)}>
           <span className={cx(cs.name)}>{name}&nbsp;</span>
-          <span className={cx(cs.price)}>od {price?.small ?? price}zł</span>
+          <span className={cx(cs.price)}>od {price}zł</span>
         </div>
         <div className={cx(cs.row)}>
           <span>{ingrediens}</span>
@@ -60,8 +60,8 @@ const Item = ({
     ) : null)(useNavigate());
 
 Item.propTypes = {
-  category: PropTypes.string.isRequired,
-  id: PropTypes.string,
+  category: PropTypes.string,
+  id: PropTypes.string.isRequired,
   image: PropTypes.string,
   ingrediens: PropTypes.string.isRequired,
   isBestseller: PropTypes.bool,

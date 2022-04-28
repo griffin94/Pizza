@@ -7,7 +7,7 @@ const Menu = ({ data }) =>
 		? Object.entries(data).map(([category, products]) => (
 				<Products category={category} key={category}>
 					{products.map((product) => (
-						<Products.Item {...product} key={product.id} />
+						<Products.Item key={product.id} category={category} {...product} />
 					))}
 				</Products>
 		  ))

@@ -3,162 +3,149 @@
   "data": {
     "pizza": [
       {
-        "category": "pizza",
-        "name": "margherita",
         "id": "margherita",
+        "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328122_640.png",
         "ingrediens": "sos pomidorowy, mozzarella",
-        "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328122_640.png",
-        "price": { "small": 19.99, "medium": 24.99, "max": 29.99 },
-        "isVege": true,
         "isBestseller": false,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": true,
+        "name": "margherita",
+        "price": 19.99
       },
       {
-        "category": "pizza",
-        "name": "pepperoni",
         "id": "pepperoni",
+        "image": "https://cdn.pixabay.com/photo/2014/11/14/09/10/pizza-530376_640.png",
         "ingrediens": "sos pomidorowy, podwójna mozzarella, podwójna kiełbasa pepperoni",
-        "image": "https://cdn.pixabay.com/photo/2014/11/14/09/10/pizza-530376_640.png",
-        "price": { "small": 24.99, "medium": 29.99, "max": 34.99 },
-        "isVege": false,
         "isBestseller": true,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "pepperoni",
+        "price": 24.99
       },
       {
-        "category": "pizza",
-        "name": "capricciosa",
         "id": "capricciosa",
-        "ingrediens": "sos pomidorowy, mozzarella, szynka, pieczarki",
         "image": "https://cdn.pixabay.com/photo/2016/07/10/16/05/pizza-1507939_640.png",
-        "price": { "small": 24.99, "medium": 29.99, "max": 34.99 },
-        "isVege": false,
+        "ingrediens": "sos pomidorowy, mozzarella, szynka, pieczarki",
         "isBestseller": false,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "capricciosa",
+        "price": 24.99
       },
       {
-        "category": "pizza",
-        "name": "hawajska",
         "id": "hawajska",
-        "ingrediens": "sos pomidorowy, mozzarella, szynka, ananas",
         "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328121_640.png",
-        "price": { "small": 24.99, "medium": 29.99, "max": 34.99 },
-        "isVege": false,
+        "ingrediens": "sos pomidorowy, mozzarella, szynka, ananas",
         "isBestseller": false,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "hawajska",
+        "price": 24.99
       },
       {
-        "category": "pizza",
-        "name": "kebab",
         "id": "kebab",
-        "ingrediens": "sos pomidorowy, mozzarella, kebab z kurczaka, cebula",
         "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328122_640.png",
-        "price": { "small": 24.99, "medium": 29.99, "max": 34.99 },
-        "isVege": false,
+        "ingrediens": "sos pomidorowy, mozzarella, kebab z kurczaka, cebula",
         "isBestseller": false,
         "isNew": true,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "kebab",
+        "price": 24.99
       },
       {
-        "category": "pizza",
-        "name": "quattro formaggi",
         "id": "quattro-formaggi",
-        "ingrediens": "sos kremowy, mozzarella, cheddar, ementaler, ser Lazur",
         "image": "https://cdn.pixabay.com/photo/2014/11/14/09/10/pizza-530376_640.png",
-        "price": { "small": 29.99, "medium": 34.99, "max": 39.99 },
-        "isVege": true,
+        "ingrediens": "sos kremowy, mozzarella, cheddar, ementaler, ser Lazur",
         "isBestseller": true,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": true,
+        "name": "quattro formaggi",
+        "price": 29.99
       },
       {
-        "category": "pizza",
-        "name": "hot & spicy",
         "id": "hot-and-spicy",
-        "ingrediens": "sos pomidorowy, mozzarella, kiełbasa pepperoni, cebula, papryczki jalapeno",
         "image": "https://cdn.pixabay.com/photo/2016/07/10/16/05/pizza-1507939_640.png",
-        "price": { "small": 29.99, "medium": 34.99, "max": 39.99 },
-        "isVege": false,
+        "ingrediens": "sos pomidorowy, mozzarella, kiełbasa pepperoni, cebula, papryczki jalapeno",
         "isBestseller": false,
         "isNew": false,
-        "isSpicy": true
-      },
-      {
-        "category": "pizza",
-        "name": "chłopska",
-        "id": "chlopska",
-        "ingrediens": "sos, ser, cebula,Staromiejska Kiełbasa Lubelska, boczek, ogórek kiszony, ser wędzony",
-        "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328121_640.png",
-        "price": { "small": 29.99, "medium": 34.99, "max": 39.99 },
+        "isSpicy": true,
         "isVege": false,
-        "isBestseller": false,
-        "isNew": true,
-        "isSpicy": false
+        "name": "hot & spicy",
+        "price": 29.99
       },
       {
-        "category": "pizza",
-        "name": "vegetariana",
-        "id": "vegetariana",
-        "ingrediens": "sos pomidorowy, mozzarella, kukurydza, pomidorki koktajlowe, papryka, cebula, zioła prowansalskie",
-        "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328122_640.png",
-        "price": { "small": 29.99, "medium": 34.99, "max": 39.99 },
-        "isVege": true,
+        "id": "chlopska",
+        "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328121_640.png",
+        "ingrediens": "sos, ser, cebula,Staromiejska Kiełbasa Lubelska, boczek, ogórek kiszony, ser wędzony",
         "isBestseller": false,
         "isNew": true,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "chłopska",
+        "price": 29.99
+      },
+      {
+        "id": "vegetariana",
+        "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328122_640.png",
+        "ingrediens": "sos pomidorowy, mozzarella, kukurydza, pomidorki koktajlowe, papryka, cebula, zioła prowansalskie",
+        "isBestseller": false,
+        "isNew": true,
+        "isSpicy": false,
+        "isVege": true,
+        "name": "vegetariana",
+        "price": 29.99
       }
     ],
     "burgers": [
       {
-        "category": "burgers",
-        "name": "cheeseburger",
         "id": "cheeseburger",
-        "ingrediens": "wołowina, cheddar, cebula, ogórek kiszony, majonez, ketchup, musztarda",
         "image": "https://cdn.pixabay.com/photo/2021/08/15/11/04/hamburger-6547521_640.png",
-        "price": 28,
-        "isVege": false,
+        "ingrediens": "wołowina, cheddar, cebula, ogórek kiszony, majonez, ketchup, musztarda",
         "isBestseller": true,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "cheeseburger",
+        "price": 28
       },
       {
-        "category": "burgers",
-        "name": "chicken",
         "id": "chicken",
-        "ingrediens": "panierowany kurczak, sałata lodowa, cheddar, pomidor, sos majonezowo-śmietanowy",
         "image": "https://cdn.pixabay.com/photo/2021/11/12/02/02/burger-6787716_960_720.png",
-        "price": 30,
-        "isVege": false,
+        "ingrediens": "panierowany kurczak, sałata lodowa, cheddar, pomidor, sos majonezowo-śmietanowy",
         "isBestseller": true,
         "isNew": false,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "chicken",
+        "price": 30
       },
       {
-        "category": "burgers",
-        "name": "stolarz",
         "id": "stolarz",
-        "ingrediens": "wołowina, bekon, panierowany ser gouda, sałata lodowa, prażona cebulka, sriracha mayo",
         "image": "https://cdn.pixabay.com/photo/2021/11/21/16/04/burger-6814594_960_720.png",
-        "price": 36,
-        "isVege": false,
+        "ingrediens": "wołowina, bekon, panierowany ser gouda, sałata lodowa, prażona cebulka, sriracha mayo",
         "isBestseller": false,
         "isNew": true,
-        "isSpicy": false
+        "isSpicy": false,
+        "isVege": false,
+        "name": "stolarz",
+        "price": 36
       },
       {
-        "category": "burgers",
-        "name": "americana",
         "id": "americana",
-        "ingrediens": "szarpana wołowina, pieczarka portobello, sałata rzymska, czerwona cebula, sos bbq, remulada, papryka jalapeno",
         "image": "https://cdn.pixabay.com/photo/2021/11/21/16/03/burger-6814593_960_720.png",
-        "price": 34,
-        "isVege": false,
+        "ingrediens": "szarpana wołowina, pieczarka portobello, sałata rzymska, czerwona cebula, sos bbq, remulada, papryka jalapeno",
         "isBestseller": false,
         "isNew": true,
-        "isSpicy": true
+        "isSpicy": true,
+        "isVege": false,
+        "name": "americana",
+        "price": 34
       }
     ]
   }
