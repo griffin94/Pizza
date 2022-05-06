@@ -1,2 +1,2 @@
-export { default as Menu } from './Menu';
-export { default as AboutUs } from './AboutUs';
+export { default as MenuContainer } from './src/Menu';
+export { default as DetailsContainer } from './src/Details';

@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMenuData } from 'redux/actions/creators';
+import { Menu } from '../../views';
 
-const useMenu = () => {
+const MenuContainer =  () => {
   const { data, error, loading } = useSelector((state) => state.menu);
   const dispatch = useDispatch();
 
@@ -11,12 +12,15 @@ const useMenu = () => {
   }, []);
 
   const loadData = () => dispatch(fetchMenuData());
-  return {
-    data,
-    error,
-    loadData,
-    loading,
-  };
+  
+  return (
+    <Menu
+      data={data}
+      error={error}
+      loadData={loadData}
+      loading={loading}
+    />
+  )
 };
 
-export default useMenu;
+export default MenuContainer;

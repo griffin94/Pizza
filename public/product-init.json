@@ -1,6 +1,8 @@
 {
   "status": 200,
   "data": {
+    "id": "margherita",
+    "name": "margherita",
     "fields": {
       "size": {
         "type": "radio",
@@ -112,10 +114,10 @@
       }
     },
     "initialValues": {
-      "size": "small",
-      "dough": "hotdog",
+      "size": "",
+      "dough": "",
       "sauce": {
-        "tomato": true,
+        "tomato": false,
         "garlic": false,
         "barbecue": false
       },
