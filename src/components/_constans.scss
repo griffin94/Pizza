@@ -19,6 +19,14 @@ $breakpoints: (
   @return map-get($breakpoints, $key);
 }
 
+$heights: (
+  Nav: 60px,
+);
+
+@function getHeight($key) {
+  @return map-get($heights, $key);
+}
+
 @mixin focusOutline {
   outline-style: solid;
   outline-width: 2px;

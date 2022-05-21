@@ -4,7 +4,7 @@
   @include row(space-between, center);
   background-color: var(--navigation-background);
   border-bottom: 1px solid var(--navigation-border);
-  height: 60px;
+  height: getHeight(Nav);
   position: sticky;
   top: 0;
   padding: 0 1rem;
