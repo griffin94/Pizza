@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+  padding: 0.5rem;
+  border: 2px solid var(--counter-border);
+  border-radius: 1rem;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: var(--counter-button-color);
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: var(--counter-button-color-disabled);
+  }
+}
+
+.count {
+  font-weight: bold;
+}
