@@ -1,0 +1,40 @@
+@import 'components/constans.scss';
+@import 'components/colors.scss';
+
+.item {
+  background-color: var(--menu-background);
+  border: 1px solid var(--menu-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  @include row(space-between, center);
+
+  &+& {
+    margin-top: 2rem;
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 112px;
+}
+
+.row {
+  @include row(null, center);
+
+  & > *+* {
+    margin-left: 2rem;
+  }
+}
+
+.col {
+  @include col;
+}
+
+.name {
+  text-transform: capitalize;
+}
+
+.label {
+  font-size: 1.8rem;
+  color: $gray-200;
+}
