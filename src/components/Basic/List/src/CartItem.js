@@ -36,8 +36,7 @@ const CartItem = ({ amount, className, decrement, details, id, image, increment,
 				count={amount}
 				decrement={() => decrement(id)}
 				increment={() => increment(id)}
-				min={-1}
-				max={10}
+				min={1}
 			/>
 			<Button.Icon onClick={() => remove(id)}>
 				<FaTrashAlt />
@@ -45,11 +44,6 @@ const CartItem = ({ amount, className, decrement, details, id, image, increment,
 		</div>
 	</li>
 );
-
-// const CartItem = (props) => {
-//   console.log(props)
-//   return null;
-// }
 
 CartItem.propTypes = {
 	amount: PropTypes.number,

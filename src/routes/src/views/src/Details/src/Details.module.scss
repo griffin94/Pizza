@@ -1,40 +1,82 @@
 @import 'components/themes';
 @import 'components/colors';
+@import 'components/constans';
 
 .container {
 	position: relative;
 }
 
-.section {
+.priceSection {
 	position: sticky;
-	top: calc(60px + 1rem);
-	background-color: var(--menu-background);
-	border: 1px solid var(--menu-border);
-	border-radius: 1rem;
-	padding: 2rem;
-}
+	top: getHeight(Nav);
+  @include zIndex(Positive);
+	padding: 2rem 0;
+  background-color: var(--body-background);
 
-.price {
-	font-size: 2.4rem;
-	strong {
-		color: $red-400;
-	}
-}
+  .spacer {
+    padding: 2rem;
+    background-color: var(--menu-background);
+    border: 1px solid var(--menu-border);
+    border-radius: 1rem;
+  }
 
-.list {
-	list-style-position: inside;
-	li {
-		display: flex;
-		
-    &::marker {
+  .title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient($gold-500, $red-500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .price {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  .totalPrice {
+    text-decoration: underline;
+  }
+  
+  .image {
+    display: none;
+  
+    @media(min-width: getBreakpoint(mobileXL)) {
       display: block;
-      width: 6px;
-      height: 6px;
-      background-color: black;
-		}
-	}
+      position: absolute;
+      top: 4rem;
+      right: 2rem;
+      max-height: calc(100% - 8rem);
+    }
+  }
 }
 
-.button {
-	width: 100%;
+
+.form {
+  padding: 2rem;
+  background-color: var(--menu-background);
+  border: 1px solid var(--menu-border);
+  border-radius: 1rem;
+  
+  .submitContainer {
+    @include col;
+    margin-top: 2rem;
+  
+    .counter {
+      margin-bottom: 1rem;
+    }
+    
+    @media(min-width: getBreakpoint(mobileXL)) {
+      @include row;
+      .counter,
+      .button {
+        flex: 1 1 50%;
+      }
+      .counter {
+        margin: 0 0.5rem 0 0;
+      }
+      .button {
+        margin: 0 0 0 0.5rem;
+      }
+    }
+  }
 }

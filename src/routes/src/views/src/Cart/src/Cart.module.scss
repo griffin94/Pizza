@@ -1,0 +1,11 @@
+@import 'components/constans.scss';
+
+.section {
+	max-width: 500px;
+	margin: 0 auto;
+	@include col(center);
+}
+
+.title {
+	margin-bottom: 2rem;
+}

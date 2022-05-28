@@ -1,5 +1,10 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'hooks';
 import { isNotEmpty } from 'validators';
+import { ROUTES } from 'routes';
+import { useDispatch } from 'react-redux';
+import { addProduct } from 'redux/actions/creators';
 
 const ERRORS = Object.freeze({
 	SIZE: 'Wybierz rozmiar pizzy',
@@ -7,19 +12,25 @@ const ERRORS = Object.freeze({
 });
 
 const useDetails = ({ data }) => {
+	const [amount, setAmount] = useState(1);
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const form = useForm({
 		initialValues: data.initialValues,
 		validate: (values) => {
 			const size = isNotEmpty(values.size, ERRORS.SIZE);
 			const dough = isNotEmpty(values.dough, ERRORS.DOUGH);
-			return Object.assign(
-        {},
-        size && { size },
-        dough && { dough }
-      );
+			return Object.assign({}, size && { size }, dough && { dough });
 		},
 		onSubmit: (values) => {
-			console.log('SUBMIT!!');
+			const product = {
+				amount,
+				id: data.id,
+				image: data.image,
+				details: form.values,
+			};
+			dispatch(addProduct(product));
+			navigate(ROUTES.CART);
 		},
 	});
 
@@ -43,16 +54,19 @@ const useDetails = ({ data }) => {
 							fieldName !== 'size' &&
 							(fieldProps.type === 'radio' || fieldProps.type === 'checkbox'),
 					)
-					.reduce(
-						(result, [fieldName, fieldProps]) => ({
+					.reduce((result, [fieldName, fieldProps]) => {
+						const price = calcFieldPrice(fieldProps.type)(
+							form.values[fieldName],
+							selectedSize[fieldName],
+						);
+						return {
 							...result,
-							[fieldName]: calcFieldPrice(fieldProps.type)(
-								form.values[fieldName],
-								selectedSize[fieldName],
-							),
-						}),
-						{},
-					)
+							[fieldName]:
+								fieldName === 'dough' || fieldName === 'ingredients'
+									? Number((price * amount).toFixed(2))
+									: Number((price).toFixed(2)),
+						};
+					}, {})
 			: {};
 		const total = Number(
 			Object.values(details)
@@ -65,9 +79,16 @@ const useDetails = ({ data }) => {
 		};
 	};
 
+	const incrementAmount = () => setAmount((currState) => currState + 1);
+
+	const decrementAmount = () => setAmount((currState) => currState - 1);
+
 	return {
+		amount,
 		data,
+		decrementAmount,
 		form,
+		incrementAmount,
 		price: calcProductPrice(),
 	};
 };

@@ -1,4 +1,14 @@
 @import 'components/animations';
+@import 'components/constans';
+@import 'components/colors';
+
+.container {
+  @include row();
+}
+
+.button:not(:first-child) {
+  margin-left: 1rem;
+}
 
 .icon {
   &.openIcon.open {
@@ -20,4 +30,20 @@
     animation: rotateRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
       fadeOut 0.3s linear forwards;
   }
+}
+
+.productsCountIcon {
+  position: absolute;
+  top: calc(17px - 1.5rem);
+  left: calc(-17px - 0.5rem);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $red-500;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  color: #fff;
 }

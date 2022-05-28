@@ -3,6 +3,7 @@
   "data": {
     "id": "margherita",
     "name": "margherita",
+    "image": "https://cdn.pixabay.com/photo/2018/04/17/17/15/italian-3328122_640.png",
     "fields": {
       "size": {
         "type": "radio",
