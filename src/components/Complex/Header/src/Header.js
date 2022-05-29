@@ -2,7 +2,7 @@ import React from 'react';
 import { ControlPanel, Nav } from 'components';
 import { cx } from 'utils';
 import cs from './Header.module.scss';
-import { ROUTES } from 'routes';
+import { ROUTES } from 'routes/src/constans';
 
 const Header = () => {
   return (

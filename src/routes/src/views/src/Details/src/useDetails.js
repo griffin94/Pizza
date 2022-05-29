@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'hooks';
 import { isNotEmpty } from 'validators';
-import { ROUTES } from 'routes';
+import { ROUTES } from 'routes/src/constans';
 import { useDispatch } from 'react-redux';
 import { addProduct } from 'redux/actions/creators';
 

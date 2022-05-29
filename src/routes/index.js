@@ -1,16 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { DetailsContainer, MenuContainer } from './src/containers';
 import { AboutUs, Cart } from './src/views';
-
-export const ROUTES = Object.freeze({
-  CART: '/koszyk',
-  CONTACT: '/kontakt',
-  GALLERY: '/galeria',
-  ID: ':id',
-  MAIN: '/',
-  MENU: '/menu',
-  SALE: '/promocje'
-})
+import { ROUTES } from './src/constans';
 
 const Pages = () => (
   <Routes>
