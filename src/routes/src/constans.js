@@ -26,3 +26,8 @@ export const CATEGORIES = Object.freeze({
   PIZZA: 'pizza',
   BURGERS: 'burgers',
 });
+
+export const ERRORS = Object.freeze({
+	SIZE: 'Wybierz rozmiar pizzy',
+	DOUGH: 'Wybierz rodzaj ciasta',
+});

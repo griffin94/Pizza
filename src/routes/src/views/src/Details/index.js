@@ -30,17 +30,17 @@ const Details = (props) =>
 						<li>
 							Opłata za pizzę:
               {' '}
-              <span className={cx(cs.price)}>{price.details.dough ?? 0} zł</span>
+              <span className={cx(cs.price)}>{price.details?.dough ?? 0} zł</span>
 						</li>
 						<li>
 							Opłata za sosy:
               {' '}
-              <span className={cx(cs.price)}>{price.details.sauce ?? 0} zł</span>
+              <span className={cx(cs.price)}>{price.details?.sauce ?? 0} zł</span>
 						</li>
 						<li>
 							Opłata za dodatkowe składniki:
               {' '}
-              <span className={cx(cs.price)}>{price.details.ingredients ?? 0} zł</span>
+              <span className={cx(cs.price)}>{price.details?.ingredients ?? 0} zł</span>
 						</li>
 					</List>
 					<img src={data.image} alt={data.name} className={cx(cs.image)} />

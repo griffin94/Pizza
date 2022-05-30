@@ -13,13 +13,16 @@ const useMenu = () => {
       category === CATEGORIES.PIZZA
         ? (id) => navigate(id)
         : (id) => {
-            const [product] = menu[category].filter(
+            const [{ image, name, price }] = menu[category].filter(
               (product) => product.id === id,
             );
             dispatch(
               addProduct({
-                ...product,
                 amount: 1,
+                id,
+                image,
+                name,
+                price,
               }),
             );
           },

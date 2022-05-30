@@ -1,20 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'hooks';
 import { isNotEmpty } from 'validators';
 import { ROUTES } from 'routes/src/constans';
 import { useDispatch } from 'react-redux';
 import { addProduct } from 'redux/actions/creators';
-
-const ERRORS = Object.freeze({
-	SIZE: 'Wybierz rozmiar pizzy',
-	DOUGH: 'Wybierz rodzaj ciasta',
-});
+import { ERRORS } from '../../../../constans';
 
 const useDetails = ({ data }) => {
 	const [amount, setAmount] = useState(1);
+	const [price, setPrice] = useState({});
+	
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+  
 	const form = useForm({
 		initialValues: data.initialValues,
 		validate: (values) => {
@@ -27,12 +26,16 @@ const useDetails = ({ data }) => {
 				amount,
 				id: data.id,
 				image: data.image,
-				details: form.values,
+				name: data.name,
+				price: price.total,
+				details: values,
 			};
 			dispatch(addProduct(product));
 			navigate(ROUTES.CART);
 		},
 	});
+
+	useEffect(() => setPrice(calcProductPrice()), [amount, form.values]);
 
 	const calcFieldPrice = (type) =>
 		({
@@ -64,7 +67,7 @@ const useDetails = ({ data }) => {
 							[fieldName]:
 								fieldName === 'dough' || fieldName === 'ingredients'
 									? Number((price * amount).toFixed(2))
-									: Number((price).toFixed(2)),
+									: Number(price.toFixed(2)),
 						};
 					}, {})
 			: {};
@@ -89,7 +92,7 @@ const useDetails = ({ data }) => {
 		decrementAmount,
 		form,
 		incrementAmount,
-		price: calcProductPrice(),
+		price,
 	};
 };
 
