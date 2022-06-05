@@ -5,8 +5,8 @@ export const ROUTES = Object.freeze({
   ID: ':id',
   MAIN: '/',
   MENU: '/menu',
-  SALE: '/promocje'
-})
+  SALE: '/promocje',
+});
 
 export const SIZE = Object.freeze({
   big: 'Duża',
@@ -28,6 +28,25 @@ export const CATEGORIES = Object.freeze({
 });
 
 export const ERRORS = Object.freeze({
-	SIZE: 'Wybierz rozmiar pizzy',
-	DOUGH: 'Wybierz rodzaj ciasta',
+  SIZE: 'Wybierz rozmiar pizzy',
+  DOUGH: 'Wybierz rodzaj ciasta',
+});
+
+export const SAUCE = Object.freeze({
+  tomato: 'Pomidorowy',
+  garlic: 'Czosnkowy',
+  barbecue: 'Barbecue',
+});
+
+export const INGREDIENTS = Object.freeze({
+  pineaple: 'Ananas',
+  onion: 'Cebula',
+  olives: 'Oliwki',
+  corn: 'Kukurydza',
+  peppers: 'Papryka',
+  pepperoni: 'Pepperoni',
+  mushrooms: 'Pieczarki',
+  ham: 'Szynka',
+  bacon: 'Boczek',
+  tomato: 'Pomidory',
 });

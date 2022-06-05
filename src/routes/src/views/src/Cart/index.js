@@ -3,14 +3,15 @@ import { List, Section } from 'components';
 import useCart from './src/useCart';
 import cs from './src/Cart.module.scss';
 import { cx } from 'utils';
+import { productHandler } from 'handlers';
 
 const Cart = () =>
 	(({ products, ...props }) =>
 		products.length > 0 ? (
 			<List>
-				{products.map((product) => (
-					<List.CartItem key={product.id} {...product} {...props} />
-				))}
+				{products.map((product) => ((serializedProduct) => (
+          <List.CartItem key={serializedProduct.id} {...serializedProduct} {...props} />
+        ))(productHandler(product)))}
 			</List>
 		) : (
 			<Section className={cx(cs.section)}>
