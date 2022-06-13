@@ -10,10 +10,12 @@
 
 [data-theme="light"] {
   @include spread-map($light-theme);
+  color-scheme: light;
 }
 
 [data-theme="dark"] {
   @include spread-map($dark-theme);
+  color-scheme: dark;
 }
 
 body {
