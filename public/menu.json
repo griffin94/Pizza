@@ -147,6 +147,36 @@
         "name": "americana",
         "price": 34
       }
+    ],
+    "sauces": [
+      {
+        "description": "Heinz, 100 ml",
+        "id": "ketchup",
+        "image": "https://cdn.pixabay.com/photo/2014/12/21/23/36/sauce-575634_960_720.png",
+        "name": "ketchup",
+        "price": 4.99
+      },
+      {
+        "description": "Heinz, 100 ml",
+        "id": "pomidorowo-ziolowy",
+        "image": "https://cdn.pixabay.com/photo/2014/12/22/00/08/sauce-576891_960_720.png",
+        "name": "pomidorowo-ziołowy",
+        "price": 4.99
+      },
+      {
+        "description": "Heinz, 100 ml",
+        "id": "czosnkowy",
+        "image": "https://cdn.pixabay.com/photo/2014/12/22/00/02/tomato-sauce-576642_960_720.png",
+        "name": "czosnkowy",
+        "price": 4.99
+      },
+      {
+        "description": "Heinz, 100 ml",
+        "id": "barbecue",
+        "image": "https://cdn.pixabay.com/photo/2014/12/22/00/08/blueberry-576890_960_720.png",
+        "name": "barbecue",
+        "price": 4.99
+      }
     ]
   }
 }

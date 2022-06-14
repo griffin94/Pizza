@@ -23,6 +23,7 @@ const useMenu = () => {
                 image,
                 name,
                 price,
+                priceTotal: price,
               }),
             );
           },

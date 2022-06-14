@@ -15,7 +15,7 @@ const CartItem = ({
   image,
   increment,
   name,
-  price,
+  priceTotal,
   remove,
 }) => {
   return (
@@ -24,7 +24,7 @@ const CartItem = ({
         <img src={image} alt={name} className={cx(cs.image)} />
         <div>
           <h3 className={cx(cs.name)}>{name}</h3>
-          <span className={cx(cs.price)}>{price} zł</span>
+          <span className={cx(cs.price)}>{priceTotal} zł</span>
         </div>
       </div>
       {details && (
@@ -37,12 +37,6 @@ const CartItem = ({
             <span className={cx(cs.label)}>Ciasto: </span>
             {details.dough}
           </span>
-          {details.sauce && (
-            <span>
-              <span className={cx(cs.label)}>Sosy: </span>
-              {details.sauce}
-            </span>
-          )}
           {details.ingredients && (
             <span>
               <span className={cx(cs.label)}>Dodatkowe składniki: </span>
@@ -75,7 +69,7 @@ CartItem.propTypes = {
   image: PropTypes.string,
   increment: PropTypes.func,
   name: PropTypes.string,
-  price: PropTypes.number,
+  priceTotal: PropTypes.number,
   remove: PropTypes.func,
 };
 

@@ -49,24 +49,6 @@
           }
         ]
       },
-      "sauce": {
-        "type": "checkbox",
-        "legend": "Wybierz sos do pizzy",
-        "options": [
-          {
-            "name": "tomato",
-            "label": "Pomidorowy"
-          },
-          {
-            "name": "garlic",
-            "label": "Czosnkowy"
-          },
-          {
-            "name": "barbecue",
-            "label": "Barbecue"
-          }
-        ]
-      },
       "ingredients": {
         "type": "checkbox",
         "legend": "Dodaj ulubione składniki",
@@ -117,11 +99,6 @@
     "initialValues": {
       "size": "",
       "dough": "",
-      "sauce": {
-        "tomato": false,
-        "garlic": false,
-        "barbecue": false
-      },
       "ingredients": {
         "pineaple": false,
         "onion": false,
@@ -143,11 +120,6 @@
           "cheese": 23.99,
           "hotdog": 23.99
         },
-        "sauce": {
-          "tomato": 4.99,
-          "garlic": 4.99,
-          "barbecue": 4.99
-        },
         "ingredients": {
           "pineaple": 1.99,
           "onion": 1.99,
@@ -167,11 +139,6 @@
           "fat": 23.99,
           "cheese": 25.99,
           "hotdog": 25.99
-        },
-        "sauce": {
-          "tomato": 4.99,
-          "garlic": 4.99,
-          "barbecue": 4.99
         },
         "ingredients": {
           "pineaple": 2.99,
@@ -193,11 +160,6 @@
           "cheese": 27.99,
           "hotdog": 27.99
         },
-        "sauce": {
-          "tomato": 4.99,
-          "garlic": 4.99,
-          "barbecue": 4.99
-        },
         "ingredients": {
           "pineaple": 3.99,
           "onion": 3.99,
@@ -217,11 +179,6 @@
           "fat": 27.99,
           "cheese": 29.99,
           "hotdog": 29.99
-        },
-        "sauce": {
-          "tomato": 4.99,
-          "garlic": 4.99,
-          "barbecue": 4.99
         },
         "ingredients": {
           "pineaple": 4.99,

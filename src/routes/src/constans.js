@@ -25,6 +25,13 @@ export const DOUGH = Object.freeze({
 export const CATEGORIES = Object.freeze({
   PIZZA: 'pizza',
   BURGERS: 'burgers',
+  SAUCES: 'sauces',
+});
+
+export const CATEGORIES_DICTIONARY = Object.freeze({
+  pizza: 'Pizza',
+  burgers: 'Burgery',
+  sauces: 'Sosy',
 });
 
 export const ERRORS = Object.freeze({

@@ -24,23 +24,18 @@ const Details = (props) =>
 					<span className={cx(cs.price, cs.totalPrice)}>
 						Do zapłaty:
             {' '}
-            {price.total} zł
+            {price.pizzaTotal || 0} zł
 					</span>
 					<List>
 						<li>
 							Opłata za pizzę:
               {' '}
-              <span className={cx(cs.price)}>{price.details?.dough ?? 0} zł</span>
-						</li>
-						<li>
-							Opłata za sosy:
-              {' '}
-              <span className={cx(cs.price)}>{price.details?.sauce ?? 0} zł</span>
+              <span className={cx(cs.price)}>{price.doughTotal ?? 0} zł</span>
 						</li>
 						<li>
 							Opłata za dodatkowe składniki:
               {' '}
-              <span className={cx(cs.price)}>{price.details?.ingredients ?? 0} zł</span>
+              <span className={cx(cs.price)}>{price.ingredientsTotal ?? 0} zł</span>
 						</li>
 					</List>
 					<img src={data.image} alt={data.name} className={cx(cs.image)} />
