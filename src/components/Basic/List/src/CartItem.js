@@ -21,7 +21,9 @@ const CartItem = ({
   return (
     <li className={cx(className, cs.item)}>
       <div className={cx(cs.header)}>
-        <img src={image} alt={name} className={cx(cs.image)} />
+        <div className={cx(cs.imageWrapper)}>
+          <img src={image} alt={name} className={cx(cs.image)} />
+        </div>
         <div>
           <h3 className={cx(cs.name)}>{name}</h3>
           <span className={cx(cs.price)}>{priceTotal} zł</span>
