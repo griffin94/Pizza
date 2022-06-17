@@ -39,34 +39,32 @@ const Item = ({
           <span>{description}</span>
         </div>
       )}
-      {(isBestseller || isNew || isSpicy || isVege) && (
-        <div className={cx(cs.row)}>
-          {isBestseller && (
-            <span className={cx(cs.icon, cs.bestseller)}>
-              <AiFillStar />
-              &nbsp;Bestseller
-            </span>
-          )}
-          {isNew && (
-            <span className={cx(cs.icon, cs.new)}>
-              <AiFillStar />
-              &nbsp;New
-            </span>
-          )}
-          {isSpicy && (
-            <span className={cx(cs.icon, cs.spicy)}>
-              <GiChiliPepper />
-              &nbsp;Spicy
-            </span>
-          )}
-          {isVege && (
-            <span className={cx(cs.icon, cs.vege)}>
-              <GiThreeLeaves />
-              &nbsp;Vege
-            </span>
-          )}
-        </div>
-      )}
+      <div className={cx(cs.row, cs.icons)}>
+        {isBestseller && (
+          <span className={cx(cs.icon, cs.bestseller)}>
+            <AiFillStar />
+            &nbsp;Bestseller
+          </span>
+        )}
+        {isNew && (
+          <span className={cx(cs.icon, cs.new)}>
+            <AiFillStar />
+            &nbsp;New
+          </span>
+        )}
+        {isSpicy && (
+          <span className={cx(cs.icon, cs.spicy)}>
+            <GiChiliPepper />
+            &nbsp;Spicy
+          </span>
+        )}
+        {isVege && (
+          <span className={cx(cs.icon, cs.vege)}>
+            <GiThreeLeaves />
+            &nbsp;Vege
+          </span>
+        )}
+      </div>
       <Button onClick={() => onClick(category)(id)}>
         {category === CATEGORIES.PIZZA ? 'Wybierz' : 'Dodaj'}
       </Button>
