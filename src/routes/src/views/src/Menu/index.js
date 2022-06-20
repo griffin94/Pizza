@@ -14,8 +14,8 @@ const Menu = ({ activeFilter, data, filter, visibleData }) =>
         {Object.keys(data).map((category) => (
           <Button
             className={cx(cs.button)}
-            kind={activeFilter === category ? KINDS.PRIMARY : null}
             key={category}
+            kind={activeFilter === category ? KINDS.PRIMARY : null}
             onClick={() => filter(category)}
           >
             {CATEGORIES_DICTIONARY[category]}
@@ -27,9 +27,9 @@ const Menu = ({ activeFilter, data, filter, visibleData }) =>
           <Products category={CATEGORIES_DICTIONARY[category]} key={category}>
             {products.map((product) => (
               <Products.Item
-                key={product.id}
                 category={category}
-                onClick={chooseProduct}
+                chooseProduct={chooseProduct}
+                key={product.id}
                 {...product}
               />
             ))}

@@ -4,6 +4,7 @@ import {
   CALC_TOTAL_PRICE,
   CLEAR_CART,
   DECREMENT_PRODUCT_AMOUNT,
+  EDIT_PRODUCT,
   INCREMENT_PRODUCT_AMOUNT,
   REMOVE_PRODUCT,
 } from '../types';
@@ -14,6 +15,7 @@ export const {
   calcTotalPrice,
   clearCart,
   decrementProductAmount,
+  editProduct,
   incrementProductAmount,
   removeProduct,
 } = {
@@ -29,6 +31,7 @@ export const {
     dispatch(calcProductPrice(productID));
     dispatch(calcTotalPrice());
   },
+  editProduct: (product) => ({ type: EDIT_PRODUCT, payload: product}),
   incrementProductAmount: (productID) => (dispatch) => {
     dispatch({ type: INCREMENT_PRODUCT_AMOUNT, payload: productID });
     dispatch(calcProductPrice(productID));

@@ -18,11 +18,13 @@ const useCart = () => {
   const remove = (productID) => dispatch(removeProduct(productID));
   const clear = () => dispatch(clearCart());
   const continueShopping = () => navigate(ROUTES.MENU);
+  const editProduct = (id) => navigate(`${ROUTES.MENU}/${id}`);
 
   return {
     clear,
     continueShopping,
     decrement,
+    editProduct,
     increment,
     price,
     products,

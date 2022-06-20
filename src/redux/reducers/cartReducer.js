@@ -4,6 +4,7 @@ import {
   CALC_TOTAL_PRICE,
   CLEAR_CART,
   DECREMENT_PRODUCT_AMOUNT,
+  EDIT_PRODUCT,
   INCREMENT_PRODUCT_AMOUNT,
   REMOVE_PRODUCT,
 } from '../actions/types';
@@ -21,7 +22,7 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         products: state.products.map((product) =>
-          product.id === action.payload
+          product.orderId === action.payload
             ? {
                 ...product,
                 priceTotal: Number((product.amount * product.price).toFixed(2)),
@@ -43,7 +44,7 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         products: state.products.map((product) =>
-          product.id === action.payload
+          product.orderId === action.payload
             ? {
                 ...product,
                 amount: product.amount - 1,
@@ -51,11 +52,18 @@ const cartReducer = (state = initialState, action) => {
             : product,
         ),
       };
+    case EDIT_PRODUCT:
+      return {
+        ...state,
+        products: state.products.map((product) =>
+          product.orderId === action.payload.orderId ? action.payload : product,
+        ),
+      };
     case INCREMENT_PRODUCT_AMOUNT:
       return {
         ...state,
         products: state.products.map((product) =>
-          product.id === action.payload
+          product.orderId === action.payload
             ? {
                 ...product,
                 amount: product.amount + 1,
@@ -67,7 +75,7 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         products: state.products.filter(
-          (product) => product.id !== action.payload,
+          (product) => product.orderId !== action.payload,
         ),
       };
     default:

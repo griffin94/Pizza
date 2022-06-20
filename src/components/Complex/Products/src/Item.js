@@ -8,6 +8,7 @@ import { CATEGORIES } from 'routes/src/constans';
 
 const Item = ({
   category,
+  chooseProduct,
   description,
   id,
   image,
@@ -17,7 +18,6 @@ const Item = ({
   isSpicy,
   isVege,
   name,
-  onClick,
   price,
 }) =>
   [id, name, price].every((el) => el !== undefined) ? (
@@ -65,7 +65,7 @@ const Item = ({
           </span>
         )}
       </div>
-      <Button onClick={() => onClick(category)(id)}>
+      <Button onClick={() => chooseProduct(category)(id)}>
         {category === CATEGORIES.PIZZA ? 'Wybierz' : 'Dodaj'}
       </Button>
     </li>
@@ -73,6 +73,7 @@ const Item = ({
 
 Item.propTypes = {
   category: PropTypes.string,
+  chooseProduct: PropTypes.func,
   description: PropTypes.string,
   id: PropTypes.string.isRequired,
   image: PropTypes.string,
@@ -82,7 +83,6 @@ Item.propTypes = {
   isSpicy: PropTypes.bool,
   isVege: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
   price: PropTypes.number.isRequired,
 };
 

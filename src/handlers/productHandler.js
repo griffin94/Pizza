@@ -1,7 +1,7 @@
 import { SIZE, DOUGH, SAUCE, INGREDIENTS } from 'routes/src/constans';
 
-const serializeDetails = (details) =>
-  Object.entries(details).reduce(
+const serializeValues = (values) =>
+  Object.entries(values).reduce(
     (result, [key, value]) => ({
       ...result,
       ...(key === 'size' && {
@@ -38,7 +38,7 @@ const serializeDetails = (details) =>
 
 const productHandler = (product) => ({
   ...product,
-  ...(product.details && { details: serializeDetails(product.details) }),
+  ...(product.values && { values: serializeValues(product.values) }),
 });
 
 export default productHandler;

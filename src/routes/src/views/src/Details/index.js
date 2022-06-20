@@ -16,7 +16,7 @@ import cs from './src/Details.module.scss';
 import { cx } from 'utils';
 
 const Details = (props) =>
-	(({ amount, data, decrementAmount, form, incrementAmount, price }) => (
+	(({ amount, data, decrementAmount, form, incrementAmount, isProductBeingAdded, price }) => (
 		<div className={cx(cs.container)}>
 			<Section className={cx(cs.priceSection)}>
 				<div className={cx(cs.spacer)}>
@@ -107,7 +107,9 @@ const Details = (props) =>
 								increment={incrementAmount}
 								min={1}
 							/>
-							<Button className={cx(cs.button)}>Dodaj</Button>
+							<Button className={cx(cs.button)}>
+                {isProductBeingAdded ? 'Dodaj' : 'Zapisz zmiany'}
+              </Button>
 						</div>
 					</Form>
 				)}

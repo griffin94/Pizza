@@ -5,24 +5,27 @@ import { fetchDetailsData } from 'redux/actions/creators';
 import { Details } from '../../views';
 
 const DetailsContainer = () => {
-	const { id } = useParams();
-	const { data, error, loading } = useSelector((state) => state.details);
-	const dispatch = useDispatch();
+  const { id } = useParams();
+  const { data, error, loading } = useSelector((state) => state.details);
+  const { products } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
-	useEffect(() => {
-		(!data || !data[id]) && loadData();
-	}, []);
+  useEffect(() => {
+    !getProductFromCart() && !(data && data[id]) && loadData();
+  }, []);
 
-	const loadData = () => dispatch(fetchDetailsData(id));
+  const loadData = () => dispatch(fetchDetailsData(id));
+  const getProductFromCart = () =>
+    products.find(({ orderId }) => orderId === id);
 
-	return (
-		<Details
-			data={data && data[id]}
-			error={error}
-			loadData={loadData}
-			loading={loading}
-		/>
-	);
+  return (
+    <Details
+      data={getProductFromCart() || (data && data[id])}
+      error={error}
+      loadData={loadData}
+      loading={loading}
+    />
+  );
 };
 
 export default DetailsContainer;

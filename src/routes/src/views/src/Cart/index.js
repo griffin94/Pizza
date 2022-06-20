@@ -13,7 +13,7 @@ const Cart = () =>
           {products.map((product) =>
             ((serializedProduct) => (
               <List.CartItem
-                key={serializedProduct.id}
+                key={serializedProduct.orderId}
                 {...serializedProduct}
                 {...props}
               />

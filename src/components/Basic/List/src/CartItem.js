@@ -4,19 +4,21 @@ import cs from './CartItem.module.scss';
 import { cx } from 'utils';
 import Counter from 'components/Basic/Counter';
 import { FaTrashAlt } from 'react-icons/fa';
+import { FiSettings } from 'react-icons/fi';
 import { Button } from 'components';
 
 const CartItem = ({
   amount,
   className,
   decrement,
-  details,
-  id,
+  editProduct,
   image,
   increment,
   name,
+  orderId,
   priceTotal,
   remove,
+  values,
 }) => {
   return (
     <li className={cx(className, cs.item)}>
@@ -29,20 +31,20 @@ const CartItem = ({
           <span className={cx(cs.price)}>{priceTotal} zł</span>
         </div>
       </div>
-      {details && (
+      {values && (
         <div className={cx(cs.details)}>
           <span>
             <span className={cx(cs.label)}>Rozmiar: </span>
-            {details.size}
+            {values.size}
           </span>
           <span>
             <span className={cx(cs.label)}>Ciasto: </span>
-            {details.dough}
+            {values.dough}
           </span>
-          {details.ingredients && (
+          {values.ingredients && (
             <span>
               <span className={cx(cs.label)}>Dodatkowe składniki: </span>
-              {details.ingredients}
+              {values.ingredients}
             </span>
           )}
         </div>
@@ -51,11 +53,22 @@ const CartItem = ({
         <Counter
           className={cx(cs.counter)}
           count={amount}
-          decrement={() => decrement(id)}
-          increment={() => increment(id)}
+          decrement={() => decrement(orderId)}
+          increment={() => increment(orderId)}
           min={1}
         />
-        <Button.Icon className={cx(cs.button)} onClick={() => remove(id)}>
+        {values && (
+          <Button.Icon
+            className={cx(cs.button)}
+            onClick={() => editProduct(orderId)}
+          >
+            <FiSettings />
+          </Button.Icon>
+        )}
+        <Button.Icon
+          className={cx(cs.button)}
+          onClick={() => remove(orderId)}
+        >
           <FaTrashAlt />
         </Button.Icon>
       </div>
@@ -67,12 +80,13 @@ CartItem.propTypes = {
   amount: PropTypes.number,
   className: PropTypes.string,
   decrement: PropTypes.func,
-  id: PropTypes.string,
+  editProduct: PropTypes.func,
   image: PropTypes.string,
   increment: PropTypes.func,
   name: PropTypes.string,
   priceTotal: PropTypes.number,
   remove: PropTypes.func,
+  values: PropTypes.object,
 };
 
 export default CartItem;

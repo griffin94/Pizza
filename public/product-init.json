@@ -96,7 +96,7 @@
         ]
       }
     },
-    "initialValues": {
+    "values": {
       "size": "",
       "dough": "",
       "ingredients": {

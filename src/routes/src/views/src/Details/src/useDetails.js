@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react';
+import { useId } from 'react-id-generator';
 import { useNavigate } from 'react-router-dom';
+import { cloneDeep } from 'lodash';
 import { useForm } from 'hooks';
 import { isNotEmpty } from 'validators';
 import { ROUTES } from 'routes/src/constans';
 import { useDispatch } from 'react-redux';
-import { addProduct } from 'redux/actions/creators';
+import { addProduct, editProduct } from 'redux/actions/creators';
 import { ERRORS } from '../../../../constans';
 
 const useDetails = ({ data }) => {
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState(data.amount || 1);
   const [price, setPrice] = useState({});
+  const [orderId] = useId(1, data.id);
+  const isProductBeingAdded = !data.orderId;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const form = useForm({
-    initialValues: data.initialValues,
+    initialValues: cloneDeep(data.values),
     validate: (values) => {
       const size = isNotEmpty(values.size, ERRORS.SIZE);
       const dough = isNotEmpty(values.dough, ERRORS.DOUGH);
@@ -23,15 +27,14 @@ const useDetails = ({ data }) => {
     },
     onSubmit: (values) => {
       const product = {
+        ...data,
+        ...(isProductBeingAdded && {orderId}),
         amount,
-        details: values,
-        id: data.id,
-        image: data.image,
-        name: data.name,
+        values,
         price: price.pizza,
         priceTotal: price.pizzaTotal,
       };
-      dispatch(addProduct(product));
+      isProductBeingAdded ? dispatch(addProduct(product)) : dispatch(editProduct(product));
       navigate(ROUTES.CART);
     },
   });
@@ -102,6 +105,7 @@ const useDetails = ({ data }) => {
     decrementAmount,
     form,
     incrementAmount,
+    isProductBeingAdded,
     price,
   };
 };
